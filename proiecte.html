@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofoliu Proiecte | ZAL</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        zal: {
+                            dark: '#0f172a',   
+                            primary: '#2563eb', 
+                            accent: '#f59e0b',  
+                            green: '#10b981',   
+                            light: '#f8fafc'    
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8));
+        }
+    </style>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" class="size-6">
+  <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+</svg>
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span> 
+                
+
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="hover:text-zal-primary transition">Despre noi</a>
+                <a href="index.html#servicii" class="hover:text-zal-primary transition">Servicii</a>
+                <a href="#" class="text-zal-primary border-b-2 border-zal-primary pb-1">Proiecte</a>
+                <a href="index.html#certificari" class="hover:text-zal-primary transition">Certificări</a>
+                <a href="index.html#cariere" class="text-zal-accent hover:text-orange-600 transition">Cariere</a>
+            </div>
+
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition shadow-lg">
+                Contactează-ne
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="#" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">Portofoliu de Lucrări</h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto animate-fade-in-up delay-100">
+                Expertiză demonstrată în proiecte de anvergură. De la clădiri de birouri inteligente, la infrastructură critică și reabilitări energetice complexe.
+            </p>
+        </div>
+    </header>
+
+    <section id="office" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                    <i class="ph-fill ph-buildings text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Comercial & Office</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-20 reveal">
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Office Building" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-zal-dark px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                        Finalizat 2023
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Green Business Hub <span class="text-slate-400 font-normal text-lg">| București</span></h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Un proiect emblematic pentru eficiență energetică. ZAL a proiectat și executat integral sistemul electric și de automatizare, contribuind la obținerea certificării BREEAM Excellent.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="border-l-4 border-zal-primary pl-4">
+                            <h4 class="font-bold text-sm text-zal-dark uppercase">Lucrări Executate:</h4>
+                            <p class="text-sm text-slate-600 mt-1">Post transformare 2x1000kVA, Tablouri generale, Sistem iluminat DALI, BMS integrat (HVAC + Electrice).</p>
+                        </div>
+                        <div class="border-l-4 border-zal-accent pl-4">
+                            <h4 class="font-bold text-sm text-zal-dark uppercase">Provocare Tehnică:</h4>
+                            <p class="text-sm text-slate-600 mt-1">Integrarea sistemului de control acces cu lifturile inteligente și detecția de incendiu.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">15.000 mp</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Smart Building</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 reveal">
+                <div class="flex flex-col justify-center order-2 md:order-1">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">North Logistics Park <span class="text-slate-400 font-normal text-lg">| Ilfov</span></h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Hale industriale cu cerințe specifice de iluminat și alimentare forță pentru linii de producție automatizate.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="text-3xl font-bold text-zal-primary">45km</div>
+                            <div class="text-xs text-slate-500 uppercase">Cabluri pozate</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-zal-primary">2MW</div>
+                            <div class="text-xs text-slate-500 uppercase">Putere instalată</div>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Iluminat industrial LED 500 lux</li>
+                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Instalații paratrăsnet PDA</li>
+                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Grup electrogen backup 500kVA</li>
+                    </ul>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl shadow-xl order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Industrial Hall" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edilitar" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-zal-accent/10 rounded-full flex items-center justify-center text-zal-accent">
+                    <i class="ph-fill ph-road-horizon text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Infrastructură Edilitară</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 reveal">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200">
+                    <div class="h-48 bg-slate-200 rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute bottom-2 right-2 bg-zal-dark text-white text-xs px-2 py-1 rounded">Execuție</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zal-dark mb-2">Rețea Electrica Cartier "Solaris"</h3>
+                    <p class="text-slate-500 text-sm mb-4">
+                        Extindere rețea joasă tensiune și iluminat stradal pentru un nou cartier rezidențial cu 200 de case.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">LES 0.4kV</span>
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">Iluminat LED</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200">
+                    <div class="h-48 bg-slate-200 rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1695651832926-66591245a88c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute bottom-2 right-2 bg-zal-dark text-white text-xs px-2 py-1 rounded">Proiectare + Execuție</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zal-dark mb-2">Reabilitare Rețele Termice</h3>
+                    <p class="text-slate-500 text-sm mb-4">
+                        Înlocuire magistrale termice primare și secundare pe o lungime de 3.5km în mediu urban aglomerat.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">Conducte Preizolate</span>
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">Automatizare Puncte Termice</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200">
+                    <div class="h-48 bg-slate-200 rounded-xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1594915440248-1e419eba6611?q=80&w=1734&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute bottom-2 right-2 bg-zal-dark text-white text-xs px-2 py-1 rounded">Telecom</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-zal-dark mb-2">Canalizație NetCity</h3>
+                    <p class="text-slate-500 text-sm mb-4">
+                        Realizare infrastructură subterană pentru fibră optică, camere de tragere și branșamente imobile.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">Fibră Optică</span>
+                        <span class="bg-slate-100 px-2 py-1 rounded text-slate-600">Excavații</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="audit" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-zal-green/10 rounded-full flex items-center justify-center text-zal-green">
+                    <i class="ph-fill ph-leaf text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Eficiență Energetică</h2>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl overflow-hidden text-white reveal">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-10 md:p-14 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">Modernizare Energetică Liceu Teoretic</h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Un proiect complex de reabilitare care a transformat o clădire veche într-una eficientă energetic (Clasa A).
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check-circle text-zal-green mt-1"></i>
+                                <div>
+                                    <span class="font-bold block text-white">Iluminat Inteligent</span>
+                                    <span class="text-sm text-slate-400">Înlocuire 100% LED cu senzori de prezență și lumină naturală.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check-circle text-zal-green mt-1"></i>
+                                <div>
+                                    <span class="font-bold block text-white">Panouri Fotovoltaice</span>
+                                    <span class="text-sm text-slate-400">Instalare sistem 50kW on-grid pentru autoconsum.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check-circle text-zal-green mt-1"></i>
+                                <div>
+                                    <span class="font-bold block text-white">Audit Energetic Final</span>
+                                    <span class="text-sm text-slate-400">Eliberare certificat energetic și plan de mentenanță.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative h-64 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute inset-0 w-full h-full object-cover opacity-80">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h2 class="text-3xl font-bold text-zal-dark mb-6">Ai un proiect care necesită precizie?</h2>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                Echipa noastră de ingineri este gata să analizeze documentația tehnică și să ofere soluții optimizate.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition shadow-lg shadow-blue-900/10">
+                    Solicită o Ofertă
+                </a>
+                <a href="mailto:office@zal.ro" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition">
+                    office@zal.ro
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <span class="bg-zal-primary px-2 rounded">ZAL</span> SA
+                    </span>
+                    <p>&copy; 2023 ZAL. Toate drepturile rezervate.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Termeni și condiții</a>
+                    <a href="#" class="hover:text-white transition">Politica de confidențialitate</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
