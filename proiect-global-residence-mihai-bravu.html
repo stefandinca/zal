@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Residence Mihai Bravu | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Global Residence</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-red-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Siguranță</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Rezidențial</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Global Residence Mihai Bravu - Corp B</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Sistem detecție și semnalizare incendiu pentru ansamblu rezidențial, București</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">DSI</div>
+                        <div class="text-xs text-slate-300 uppercase">Sistem Complet</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Corp B</div>
+                        <div class="text-xs text-slate-300 uppercase">Clădire</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">ISU</div>
+                        <div class="text-xs text-slate-300 uppercase">Avizat</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">24/7</div>
+                        <div class="text-xs text-slate-300 uppercase">Monitorizare</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Global Residence Mihai Bravu - ansamblu rezidențial modern pentru care ZAL a executat sistemul complet de detecție și semnalizare incendiu (DSI) pentru Corp B. Proiectul asigură siguranța locatarilor prin tehnologie modernă de prevenire și alertare incendii, conform normelor ISU.
+                        </p>
+                        <p>
+                            Am implementat centrală adresabilă de detecție incendiu cu監control permanent al tuturor detectoarelor, detectoare optice de fum în apartamente, coridoare și spații comune, detectoare termice în zonele predispuse (bucătării, centrale termice), butoane manuale de alarmare la toate ieșirile și pe căile de evacuare, sirene și semnalizatoare luminoase pentru alertare imediată, și cablare rezistentă la foc conform normelor de siguranță pompieri.
+                        </p>
+                        <p>
+                            Sistemul este integrat și testat conform cerințelor ISU, oferind protecție maximă pentru locuitorii din Global Residence Mihai Bravu Corp B prin detecție timpurie a fumului și alertare automată.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700 font-medium">Ansamblu Rezidențial</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Proiect</div>
+                                <div class="text-slate-700">Global Residence</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Corp</div>
+                                <div class="text-slate-700">Corp B</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">Mihai Bravu, București</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Sistem</div>
+                                <div class="text-slate-700">DSI - Detecție & Semnalizare Incendiu</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Execuție Sistem DSI</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Operațional & Avizat ISU</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Componente Sistem DSI</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-red-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-broadcast text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Centrală Adresabilă</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Centrală modernă de detectare incendiu, control individual pentru fiecare detector, localizare precisă zonă afectată, interfață intuitivă pentru monitorizare 24/7.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-orange-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-thermometer-hot text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Detectoare Multiple</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Detectoare optice de fum pentru apartamente și coridoare, detectoare termice pentru bucătării și centrale, butoane manuale de alarmă la ieșiri.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-amber-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-bell text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Alertare Imediată</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Sirene puternice pentru alertare sonorăm, semnalizatoare luminoase pentru persoane cu dizabilități auditive, cablare rezistentă la foc conform ISU.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h3 class="text-2xl font-bold text-zal-dark mb-4">Sistem de siguranță sau detecție incendiu?</h3>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                ZAL oferă servicii specializate pentru sisteme DSI rezidențiale și comerciale. Experiență în centrale adresabile, detectoare multiple și conformitate ISU.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    Solicită Ofertă
+                </a>
+                <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                    Vezi Alte Proiecte
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

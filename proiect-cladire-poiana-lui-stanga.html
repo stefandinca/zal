@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clădire de Locuit Poiana lui Stanga | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Poiana lui Stanga</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-zal-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Rezidențial</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">P+1E</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Clădire de Locuit Poiana lui Stanga</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Instalații MEP complete pentru locuință modernă P+1E</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">P+1E</div>
+                        <div class="text-xs text-slate-300 uppercase">Etajare</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">MEP</div>
+                        <div class="text-xs text-slate-300 uppercase">Complete</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Modern</div>
+                        <div class="text-xs text-slate-300 uppercase">Instalații</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Eficient</div>
+                        <div class="text-xs text-slate-300 uppercase">Energetic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Clădire de Locuit în zona Poiana lui Stanga - locuință modernă P+1E (Parter + 1 Etaj) pentru care ZAL a executat instalații MEP complete. Proiectul demonstrează expertiza noastră în construcții rezidențiale cu soluții tehnice moderne pentru confort maxim și eficiență energetică.
+                        </p>
+                        <p>
+                            Am implementat instalații electrice moderne cu tablou principal și secundare pe nivele, circuite dedicate pentru prize și iluminat, protecție diferențială și împământare conform normelor, sisteme HVAC eficiente pentru încălzire și răcire - climatizare modernă sau încălzire centrală cu radiatoare/pardoseală radianta, instalații sanitare complete - apă caldă și rece, canalizare, preparare ACM prin boiler electric sau centrală termică, și ventilație mecanică sau naturală pentru evacuare umiditate din băi și bucătărie.
+                        </p>
+                        <p>
+                            Toate instalațiile sunt realizate cu materiale de calitate și respectă normativele în vigoare, asigurând funcționare sigură, eficientă și de lungă durată pentru familia care locuiește în clădirea din Poiana lui Stanga.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700 font-medium">Clădire de Locuit Unifamilială</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Etajare</div>
+                                <div class="text-slate-700">P+1E (Parter + 1 Etaj)</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">Poiana lui Stanga</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Instalații</div>
+                                <div class="text-slate-700">MEP Complete (Electrice, Sanitare, HVAC)</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Execuție MEP Completă</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Finalizat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Instalații Complete pentru Confort Modern</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-amber-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-lightning text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Instalații Electrice</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Tablouri pe nivele, circuite dedicate pentru prize și iluminat, protecție diferențială și împământare, cablare structurată pentru date și TV, LED eficient.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-indigo-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-thermometer text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">HVAC & Încălzire</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Sisteme moderne de încălzire (centrală, climatizare sau pompă de căldură), control temperatură pe zone, ventilație în băi și bucătărie, eficiență energetică.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-blue-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-drop text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sanitare Complete</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Instalații apă caldă și rece, canalizare gravitațională, preparare ACM (boiler/centrală), obiecte sanitare moderne, garantie și conformitate ISCIR.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h3 class="text-2xl font-bold text-zal-dark mb-4">Construcție rezidențială sau locuință modernă?</h3>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                ZAL oferă servicii complete de execuție MEP pentru case unifamiliale, vile și clădiri rezidențiale. Experiență în toate tipurile de instalații pentru confort maxim.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    Solicită Ofertă
+                </a>
+                <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                    Vezi Alte Proiecte
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

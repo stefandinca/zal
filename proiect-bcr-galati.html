@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCR Galați | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Project Image -->
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">BCR Galați</span>
+            </div>
+
+            <!-- Project Title -->
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-zal-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Banking
+                    </span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Finalizat 2020
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Amenajare Sucursală BCR Galați</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Banca Comercială Română - Galați</p>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">400</div>
+                        <div class="text-xs text-slate-300 uppercase">mp Amenajați</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">VRV</div>
+                        <div class="text-xs text-slate-300 uppercase">HVAC Modern</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">DTAC</div>
+                        <div class="text-xs text-slate-300 uppercase">+PT Complete</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">2020</div>
+                        <div class="text-xs text-slate-300 uppercase">Finalizat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Main Description -->
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Proiectul de amenajare interioară pentru sucursala Băncii Comerciale Române din Galați (400 mp) a inclus proiectare și execuție completă pentru toate instalațiile tehnice. Scopul: modernizarea spațiului pentru desfășurare operațiuni bancare, compartimentări interioare, reconfigurare instalații, renovare fațade și refacere signalistică exterioară.
+                        </p>
+                        <p>
+                            ZAL a realizat proiectarea în fazele DTAC (Detalii de Arhitectură și Construcții) și PT (Proiect Tehnic) pentru toate instalațiile: sanitare cu sistem de stingere a incendiilor cu sprinklere, HVAC cu sistem VRV pentru încălzire/răcire și ventilare, instalații electrice curenți tari și slabi, asigurând conformitate cu standardele stricte ale sectorului bancar.
+                        </p>
+                        <p>
+                            Proiectul a respectat cerințele specifice BCR privind siguranța, eficiența energetică și designul contemporan. Toate sistemele au fost integrate armonios pentru a crea un mediu profesional, confortabil și sigur pentru clienți și angajați.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mt-10" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                             alt="Bancă modernă"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+
+                </div>
+
+                <!-- Project Info Sidebar -->
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">Banca Comercială Română S.A.</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700">Sucursală Bancară</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Suprafață</div>
+                                <div class="text-slate-700">400 mp</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Perioada</div>
+                                <div class="text-slate-700">2020</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">Galați, România</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Proiectare DTAC + PT - Toate Instalațiile</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Operațional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Instalații Proiectate DTAC + PT</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Sanitary & HVAC -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-drop text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Sanitare & HVAC</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații sanitare conform cerințelor BCR</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații de stingere a incendiilor cu sprinklere</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem HVAC tip VRV (Variable Refrigerant Volume)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem distribuție agent termic (apă caldă/rece)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sisteme de ventilare și climatizare integrate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Aer condiționat individual pe zone</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Electrical Systems -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-500">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Electrice</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Instalații electrice curenți tari pentru toate zonele</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Instalații electrice curenți slabi pentru IT și comunicații</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Iluminat profesional specific spațiilor bancare</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem complet de prize și circuite dedicate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Tablouri electrice cu protecții dedicate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Conformitate cu standardele de siguranță bancare</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features / Highlights -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Caracteristici Principale</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 reveal hover:border-zal-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-bank text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Standarde Bancare</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Proiectare conform cerințelor stricte BCR pentru siguranță, funcționalitate și imagine de brand profesională.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 reveal hover:border-zal-green transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-green rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-wind text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sistem VRV Modern</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tehnologie HVAC avansată pentru confort termic optim și eficiență energetică ridicată în toate zonele.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 reveal hover:border-red-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-fire-extinguisher text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Siguranță Maximă</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sistem complet de stingere incendiu cu sprinklere și instalații electrice conforme cu normele de siguranță.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Outcome / Results -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold mb-6">Rezultate Proiect</h2>
+                <p class="text-lg text-slate-300 mb-12 leading-relaxed">
+                    Sucursala BCR Galați a fost modernizată complet în 2020, beneficiind de instalații tehnice moderne și eficiente. Spațiul funcționează optim, oferind confort pentru clienți și eficiență pentru operațiunile bancare zilnice.
+                </p>
+
+                <!-- Results Grid -->
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">400</div>
+                        <div class="text-sm text-slate-400 uppercase">mp Modernizați</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">VRV</div>
+                        <div class="text-sm text-slate-400 uppercase">Tehnologie</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">4</div>
+                        <div class="text-sm text-slate-400 uppercase">Tipuri Instalații</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">2020</div>
+                        <div class="text-sm text-slate-400 uppercase">Finalizat</div>
+                    </div>
+                </div>
+
+                <!-- Certification Note -->
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <i class="ph-fill ph-seal-check text-4xl text-zal-green"></i>
+                        <h3 class="text-2xl font-bold">Proiectare Completă</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">
+                        Documentație tehnică completă DTAC + PT:
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-white/10 px-4 py-2 rounded-lg text-sm font-semibold text-white border border-white/20">Instalații Sanitare + Sprinklere</span>
+                        <span class="bg-white/10 px-4 py-2 rounded-lg text-sm font-semibold text-white border border-white/20">HVAC Sistem VRV</span>
+                        <span class="bg-white/10 px-4 py-2 rounded-lg text-sm font-semibold text-white border border-white/20">Instalații Electrice Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects / CTA -->
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte Similare</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+                <!-- Related Project 1 -->
+                <a href="proiect-philip-morris-otopeni.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Office</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Philip Morris Otopeni</h3>
+                        <p class="text-sm text-slate-600">Sistem KNX - Otopeni</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 2 -->
+                <a href="proiect-rolex-jw-marriott.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-accent font-bold uppercase mb-2">Retail</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">ROLEX JW Marriott</h3>
+                        <p class="text-sm text-slate-600">Luxury Retail - București</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 3 -->
+                <a href="proiecte.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Comercial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Vezi Alte Proiecte</h3>
+                        <p class="text-sm text-slate-600">Portofoliu Complet</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center reveal">
+                <div class="bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Amenajare spații comerciale sau birouri?</h3>
+                    <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                        ZAL oferă servicii complete de proiectare și execuție pentru spații bancare, retail, birouri și comerciale. Proiecte DTAC + PT pentru toate instalațiile.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 active:scale-95">
+                            Solicită Proiectare
+                        </a>
+                        <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                            Vezi Toate Proiectele
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-slate-300 transition z-10">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* =================================================================
+   ZAL Custom Styles
+   ================================================================= */
+
+/* Reveal Animation - folosit pentru scroll animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Overlay - gradient overlay pentru secțiuni hero */
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8));
+}
+
+/* Hero Overlay alternativ - pentru pagina principală */
+.hero-overlay-horizontal {
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+}
+
+/* =================================================================
+   Navigation Links - animație underline
+   ================================================================= */
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #2563eb; /* zal-primary */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active-link {
+    color: #2563eb;
+}
+
+.nav-link.active-link::after {
+    width: 100%;
+}
+
+/* =================================================================
+   Button Utilities
+   ================================================================= */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.3),
+                0 10px 10px -5px rgba(37, 99, 235, 0.04);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+/* =================================================================
+   Lightbox - pentru galerii foto
+   ================================================================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+/* =================================================================
+   Component Library Styles (pentru elements.html)
+   ================================================================= */
+.component-section {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    background: white;
+}
+
+.component-title {
+    background: #0f172a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}

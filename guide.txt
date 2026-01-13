@@ -1,0 +1,578 @@
+================================================================================
+                    GHID DE ACTUALIZARE ȘI EXTINDERE WEBSITE ZAL
+================================================================================
+
+Acest document explică cum să actualizezi și să extinzi website-ul ZAL cu
+pagini noi, menținând consistența designului și a structurii.
+
+================================================================================
+1. STRUCTURA PROIECTULUI
+================================================================================
+
+zal/
+├── index.html              # Pagina principală
+├── proiecte.html           # Pagina cu portofoliu de proiecte
+├── proiect-template.html   # Template pentru pagini individuale de proiect
+├── elements.html           # Bibliotecă de componente UI
+├── css/
+│   └── styles.css          # Toate stilurile custom
+└── guide.txt               # Acest ghid (în română)
+
+================================================================================
+2. STRUCTURA UNEI PAGINI HTML
+================================================================================
+
+Fiecare pagină HTML trebuie să conțină următoarele elemente în <head>:
+
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Titlu Pagină] | ZAL</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Configurare Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        zal: {
+                            dark: '#0f172a',
+                            primary: '#2563eb',
+                            accent: '#f59e0b',
+                            green: '#10b981',
+                            light: '#f8fafc'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+================================================================================
+3. PALETAR DE CULORI ZAL
+================================================================================
+
+Folosește aceste clase Tailwind pentru culori consistente:
+
+• zal-dark      → #0f172a  (Fundal întunecat, text principal întunecat)
+• zal-primary   → #2563eb  (Albastru - butoane principale, linkuri)
+• zal-accent    → #f59e0b  (Portocaliu - accente, cariere, CTA-uri)
+• zal-green     → #10b981  (Verde - eficiență energetică, succes)
+• zal-light     → #f8fafc  (Fundal deschis, secțiuni alternative)
+
+Exemple de utilizare:
+- bg-zal-primary        (fundal albastru)
+- text-zal-dark         (text întunecat)
+- border-zal-accent     (bordură portocalie)
+- hover:bg-zal-green    (fundal verde la hover)
+
+================================================================================
+4. CUM SĂ CREEZI O PAGINĂ NOUĂ
+================================================================================
+
+PASUL 1: Copiază un template existent
+---------------------------------------
+• Pentru o pagină simplă: copiază index.html
+• Pentru o pagină de proiect: copiază proiect-template.html
+• Pentru o pagină de listing: copiază proiecte.html
+
+PASUL 2: Redenumește fișierul
+------------------------------
+Exemplu: despre-noi.html, servicii-detalii.html, contact.html
+
+PASUL 3: Actualizează <title>
+------------------------------
+<title>Despre Noi | ZAL</title>
+
+PASUL 4: Adaugă conținut folosind componente din elements.html
+----------------------------------------------------------------
+Deschide elements.html în browser și copiază componentele dorite.
+
+PASUL 5: Adaugă linkuri în navigare
+------------------------------------
+Actualizează bara de navigare în toate paginile pentru a include noua pagină.
+
+Exemplu:
+<a href="despre-noi.html" class="nav-link">Despre noi</a>
+
+================================================================================
+5. COMPONENTE DISPONIBILE (elements.html)
+================================================================================
+
+Deschide elements.html în browser pentru a vedea toate componentele disponibile.
+
+Componente principale:
+----------------------
+🧭 Bară de Navigare              - Header cu meniu desktop și mobil
+🎯 Hero Section                  - Antet principal cu fundal și butoane
+📄 Hero Simplu                   - Antet pentru pagini secundare
+🔘 Butoane                       - Butoane principale, secundare, outline
+🏷️ Badges/Etichete              - Tag-uri pentru categorii și status
+🎓 Carduri Certificări           - Grid 4 coloane pentru acreditări
+⚡ Carduri Servicii              - Grid 3 coloane pentru servicii
+🖼️ Carduri Proiecte              - Carduri mari cu imagine și hover
+📋 Detalii Proiect               - Layout 2 coloane (imagine + text)
+🏗️ Carduri Mici Proiecte         - Grid compact pentru multiple proiecte
+💼 Carduri Cariere               - Postări de joburi cu butoane aplicare
+ℹ️ Secțiune Despre               - Layout 2 coloane (text + imagine)
+📧 Formular Contact              - Formular complet cu validare
+📣 CTA (Call to Action)          - Secțiuni pentru îndemnuri la acțiune
+✅ Liste cu Iconițe              - Liste simple și cu descrieri
+📊 Statistici/Numere             - Grid pentru numere mari impressive
+🦶 Footer                        - Subsol cu copyright și linkuri
+🎨 Iconițe                       - Biblioteca Phosphor Icons
+
+================================================================================
+6. CUM SĂ FOLOSEȘTI COMPONENTELE
+================================================================================
+
+PASUL 1: Deschide elements.html în browser
+PASUL 2: Găsește componenta dorită
+PASUL 3: Copiază codul HTML al componentei
+PASUL 4: Lipește în noua ta pagină
+PASUL 5: Personalizează textul, culorile și linkurile
+
+Exemplu - Adăugare card de serviciu:
+-------------------------------------
+<div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-zal-primary transition-all duration-300 hover:-translate-y-2">
+    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-zal-primary mb-4">
+        <i class="ph-fill ph-lightning text-2xl"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2 text-white">Titlu Serviciu</h3>
+    <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
+        <li>Caracteristică 1</li>
+        <li>Caracteristică 2</li>
+        <li>Caracteristică 3</li>
+    </ul>
+</div>
+
+================================================================================
+7. ICONIȚE (PHOSPHOR ICONS)
+================================================================================
+
+Website-ul folosește Phosphor Icons: https://phosphoricons.com
+
+Tipuri de icoane disponibile:
+- ph          (regulat, normal)
+- ph-bold     (îngroșat)
+- ph-fill     (umplut)
+- ph-light    (subțire)
+- ph-thin     (foarte subțire)
+
+Exemple de utilizare:
+---------------------
+<i class="ph-fill ph-lightning"></i>           # Fulger umplut
+<i class="ph-fill ph-buildings"></i>           # Clădiri
+<i class="ph-fill ph-leaf"></i>                # Frunză (ecologie)
+<i class="ph-fill ph-drop"></i>                # Picătură (sanitare)
+<i class="ph-fill ph-broadcast"></i>           # Telecomunicații
+<i class="ph-fill ph-check"></i>               # Check mark
+<i class="ph-fill ph-map-pin"></i>             # Locație
+<i class="ph-fill ph-envelope-simple"></i>     # Email
+
+Dimensiuni:
+-----------
+text-xs     # Foarte mic
+text-sm     # Mic
+text-base   # Normal
+text-xl     # Mare
+text-2xl    # Foarte mare
+text-4xl    # Extra mare
+
+Culori:
+-------
+text-zal-primary    # Albastru
+text-zal-accent     # Portocaliu
+text-zal-green      # Verde
+text-white          # Alb
+text-slate-600      # Gri
+
+Exemplu complet:
+<i class="ph-fill ph-lightning text-4xl text-zal-primary"></i>
+
+================================================================================
+8. ANIMAȚII ȘI EFECTE SPECIALE
+================================================================================
+
+REVEAL ANIMATION (apare la scroll)
+------------------------------------
+Adaugă clasa "reveal" la orice element pentru animație la scroll:
+
+<div class="reveal">
+    <!-- Conținut aici -->
+</div>
+
+Elementul va apărea treptat când utilizatorul scrollează la el.
+
+HOVER EFFECTS (efecte la trecere cu mouse-ul)
+----------------------------------------------
+• hover:scale-105          - Mărește la hover
+• hover:-translate-y-1     - Ridică în sus
+• hover:shadow-xl          - Adaugă umbră mare
+• hover:bg-zal-primary     - Schimbă culoarea de fundal
+• hover:text-white         - Schimbă culoarea textului
+
+Exemplu buton cu efecte:
+<a href="#" class="bg-zal-primary text-white px-8 py-4 rounded-xl
+   hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+    Click aici
+</a>
+
+TRANSITIONS (tranziții)
+-----------------------
+transition-all duration-300    # Tranziție smoothă 300ms
+transition-colors              # Doar pentru culori
+transition-transform           # Doar pentru transformări
+
+================================================================================
+9. LAYOUT-URI RESPONSIVE (MOBILE, TABLET, DESKTOP)
+================================================================================
+
+Tailwind folosește breakpoint-uri:
+- sm:   (≥640px)  - Telefoane mari
+- md:   (≥768px)  - Tablete
+- lg:   (≥1024px) - Desktop mic
+- xl:   (≥1280px) - Desktop mare
+
+Exemplu de grid responsive:
+---------------------------
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- 1 coloană pe mobile, 2 pe tablet, 3 pe desktop -->
+</div>
+
+Ascunde/Arată pe diferite dispozitive:
+--------------------------------------
+hidden md:block              # Ascuns pe mobile, vizibil pe tablet+
+md:hidden                    # Vizibil pe mobile, ascuns pe tablet+
+hidden md:flex               # Ascuns pe mobile, flex pe tablet+
+
+Exemple de text responsive:
+---------------------------
+text-2xl md:text-4xl         # Text mai mare pe desktop
+px-4 md:px-8                 # Padding mai mare pe desktop
+
+================================================================================
+10. BARA DE NAVIGARE
+================================================================================
+
+Fiecare pagină trebuie să aibă aceeași bară de navigare.
+
+Marcarea paginii active:
+------------------------
+Adaugă clasa "active-link" la linkul paginii curente:
+
+<a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+
+Bara de navigare include:
+-------------------------
+• Logo ZAL (link către index.html)
+• Meniu desktop (ascuns pe mobile)
+• Buton "Contactează-ne"
+• Buton meniu mobil (vizibil doar pe mobile)
+• Meniu mobil expandabil
+
+JavaScript necesar pentru meniu mobil:
+--------------------------------------
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+================================================================================
+11. FOOTER (SUBSOL)
+================================================================================
+
+Fiecare pagină trebuie să aibă același footer.
+
+Template footer:
+----------------
+<footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                     <span class="bg-zal-primary px-2 rounded">ZAL</span> SA
+                </span>
+                <p>&copy; 2023 ZAL. Toate drepturile rezervate.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">Termeni și condiții</a>
+                <a href="#" class="hover:text-white transition">Politica de confidențialitate</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+================================================================================
+12. CUM SĂ ADAUGI O PAGINĂ DE PROIECT NOU
+================================================================================
+
+PASUL 1: Copiază proiect-template.html
+---------------------------------------
+Copiază fișierul și redenumește-l (ex: proiect-green-business-hub.html)
+
+PASUL 2: Înlocuiește toate placeholder-urile [TEXT]
+----------------------------------------------------
+Caută și înlocuiește:
+• [NUMELE PROIECTULUI]
+• [Categorie: Comercial / Edilitar / Rezidențial]
+• [AN]
+• [Locație - Oraș, Județ]
+• [Numele Clientului]
+• [Descriere proiect...]
+• Etc.
+
+PASUL 3: Adaugă imagini reale
+------------------------------
+Înlocuiește URL-urile de la Unsplash cu imagini reale ale proiectului.
+
+PASUL 4: Completează detaliile tehnice
+---------------------------------------
+• Lucrări executate
+• Provocări tehnice
+• Caracteristici principale
+• Rezultate
+
+PASUL 5: Actualizează galeria foto
+-----------------------------------
+Adaugă 5-10 imagini reprezentative ale proiectului în secțiunea gallery.
+
+PASUL 6: Adaugă link în proiecte.html
+--------------------------------------
+În proiecte.html, adaugă un card nou care trimite către noua pagină:
+
+<a href="proiect-green-business-hub.html" class="block h-full">
+    <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all">
+        <img src="..." alt="...">
+        <h3>Green Business Hub</h3>
+        <p>Descriere scurtă...</p>
+    </div>
+</a>
+
+================================================================================
+13. ACTUALIZAREA STILURILOR CUSTOM (css/styles.css)
+================================================================================
+
+Fișierul css/styles.css conține toate stilurile custom.
+
+Când să adaugi stiluri noi:
+---------------------------
+• Când ai nevoie de animații complexe
+• Când ai efecte speciale care nu sunt în Tailwind
+• Când ai stiluri care se repetă foarte mult
+
+Cum să adaugi un stil nou:
+-------------------------
+1. Deschide css/styles.css
+2. Adaugă noul stil la sfârșitul fișierului
+3. Adaugă comentarii clare pentru documentație
+
+Exemplu:
+/* Animație fade-in pentru modal */
+.modal-fade {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-fade.active {
+    opacity: 1;
+}
+
+================================================================================
+14. BEST PRACTICES (CEL MAI BUNE PRACTICI)
+================================================================================
+
+✅ FOLOSEȘTE întotdeauna culorile ZAL (zal-dark, zal-primary, etc.)
+✅ COPIAZĂ componente din elements.html pentru consistență
+✅ ADAUGĂ clasa "reveal" pentru animații la scroll
+✅ FOLOSEȘTE grid responsive (grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
+✅ TESTEAZĂ pe mobile, tablet și desktop
+✅ OPTIMIZEAZĂ imaginile înainte de upload (max 1920px lățime)
+✅ FOLOSEȘTE icoane Phosphor pentru consistență
+✅ ADAUGĂ text alternativ (alt="...") la toate imaginile
+✅ MENȚINE aceeași structură de navigare în toate paginile
+✅ ACTUALIZEAZĂ anul în footer (© 2023 → © 2024)
+
+❌ NU folosi culori random - doar paleta ZAL
+❌ NU crea stiluri inline - folosește clase Tailwind
+❌ NU uita să adaugi link-ul către css/styles.css
+❌ NU uita să adaugi scriptul pentru meniul mobil
+❌ NU uita să marchezi pagina activă în navigare
+❌ NU folosi imagini foarte mari (peste 2MB) - optimizează-le
+
+================================================================================
+15. TROUBLESHOOTING (REZOLVARE PROBLEME)
+================================================================================
+
+PROBLEMA: Stilurile custom nu se aplică
+SOLUȚIE: Verifică dacă ai <link rel="stylesheet" href="css/styles.css">
+
+PROBLEMA: Iconițele nu apar
+SOLUȚIE: Verifică dacă ai <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+PROBLEMA: Culorile ZAL nu funcționează
+SOLUȚIE: Verifică configurarea Tailwind în <script>tailwind.config = {...}</script>
+
+PROBLEMA: Meniul mobil nu se deschide
+SOLUȚIE: Verifică dacă ai scriptul JavaScript la sfârșitul paginii
+
+PROBLEMA: Animațiile reveal nu funcționează
+SOLUȚIE: Verifică dacă ai scriptul IntersectionObserver la sfârșitul paginii:
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+
+PROBLEMA: Lightbox-ul galeriei nu funcționează
+SOLUȚIE: Verifică dacă ai funcțiile openLightbox() și closeLightbox() în script
+
+================================================================================
+16. RESURSE UTILE
+================================================================================
+
+Tailwind CSS Documentation:      https://tailwindcss.com/docs
+Phosphor Icons:                   https://phosphoricons.com
+Unsplash (imagini gratuite):      https://unsplash.com
+TinyPNG (optimizare imagini):     https://tinypng.com
+Google Fonts (Inter):             https://fonts.google.com/specimen/Inter
+
+================================================================================
+17. STRUCTURA SCRIPTURILOR JAVASCRIPT NECESARE
+================================================================================
+
+La sfârșitul fiecărei pagini, înainte de </body>, trebuie să incluzi:
+
+<script>
+    // 1. Meniu Mobil
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+
+    // 2. Reveal Animation (doar pe pagini cu clasa .reveal)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    // 3. Lightbox (doar pe pagini cu galerie foto)
+    function openLightbox(element) {
+        const img = element.querySelector('img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+================================================================================
+18. CHECKLIST PENTRU O PAGINĂ NOUĂ
+================================================================================
+
+Înainte de a finaliza o pagină nouă, verifică:
+
+□ Titlul paginii este corect (<title>...</title>)
+□ Toate link-urile către CSS și JavaScript sunt incluse
+□ Bara de navigare este identică cu celelalte pagini
+□ Pagina activă este marcată în navigare (active-link)
+□ Footer-ul este identic cu celelalte pagini
+□ Toate imaginile au atribut alt="..."
+□ Toate culorile folosesc paleta ZAL
+□ Pagina este responsive (testată pe mobile, tablet, desktop)
+□ Animațiile reveal funcționează
+□ Meniul mobil se deschide și închide corect
+□ Link-urile externe se deschid în tab nou (target="_blank")
+□ Formulare au acțiuni definite (action="..." sau JavaScript)
+□ Textele sunt în limba română
+□ Nu există texte placeholder [TEXT] rămase
+
+================================================================================
+19. EXEMPLE DE PAGINI CARE POȚI CREA
+================================================================================
+
+• despre-noi.html           - Pagină extinsă despre companie
+• echipa.html               - Pagină cu membrii echipei
+• servicii-detalii.html     - Detalii extinse despre servicii
+• contact.html              - Pagină dedicată contact cu hartă
+• blog.html                 - Listing articole blog
+• articol-template.html     - Template pentru articole individuale
+• certificari-detalii.html  - Detalii complete despre certificări
+• cariere-detalii.html      - Descrieri detaliate posturi
+• proiecte-categoria.html   - Proiecte filtrate pe categorie
+• testimoniale.html         - Recenzii și testimoniale clienți
+• faq.html                  - Întrebări frecvente
+
+================================================================================
+20. SUPORT ȘI ÎNTREBĂRI
+================================================================================
+
+Pentru întrebări despre Tailwind CSS:    https://tailwindcss.com/docs
+Pentru întrebări despre iconițe:         https://phosphoricons.com
+
+Documentație tehnică:
+• HTML5: https://developer.mozilla.org/en-US/docs/Web/HTML
+• CSS3: https://developer.mozilla.org/en-US/docs/Web/CSS
+• JavaScript: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+================================================================================
+                              SUCCES CU DEZVOLTAREA!
+================================================================================
+
+Acest ghid ar trebui să îți ofere toate informațiile necesare pentru a
+actualiza și extinde website-ul ZAL. Pentru orice nelămuriri, consultă
+fișierul elements.html pentru exemple vizuale ale tuturor componentelor.
+
+Creat: 2025
+Versiune: 1.0

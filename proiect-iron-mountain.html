@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Mountain | ZAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Iron Mountain</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-indigo-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Depozitare / Logistică</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Finalizat 2015</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Iron Mountain</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">București, România</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Iluminat</div>
+                        <div class="text-xs text-slate-300 uppercase">LED Industrial</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Fire Safety</div>
+                        <div class="text-xs text-slate-300 uppercase">Detecție & Semnalizare</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">UPS</div>
+                        <div class="text-xs text-slate-300 uppercase">Backup Complet</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">100%</div>
+                        <div class="text-xs text-slate-300 uppercase">Operațional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>Iron Mountain este lider mondial în servicii de management și stocare securizată a informațiilor. ZAL a realizat în 2015 un proiect complex de instalații electrice și sisteme de siguranță pentru depozitul lor din București.</p>
+                        <p><strong>Instalații Electrice și Iluminat:</strong> Am executat instalații electrice complete pentru iluminat industrial de înaltă eficiență în toate zonele depozitului. Sistemul include corpuri LED industriale montate strategic pentru iluminare uniformă, tablouri de distribuție și protecție, instalații pentru prize și alimentare echipamente, cablaj structurat pentru întregul complex.</p>
+                        <p><strong>Sistem Detecție și Semnalizare Incendiu:</strong> Am implementat un sistem complet DSSI cu centrale de detecție inteligente, detectoare optice de fum în toate zonele, sirene și dispozitive de semnalizare vizuală și sonoră, sistem de alarmare și evacuare, butoane manuale de alarmare, integrare cu sistemele de stingere și evacuare, monitorizare 24/7 a tuturor senzorilor.</p>
+                        <p><strong>Sistem UPS și Backup:</strong> Pentru asigurarea continuității serviciilor critice, am instalat sistem UPS de putere pentru alimentare neîntreruptibilă, baterii de backup cu autonomie extinsă, tablouri de distribuție cu comutare automată, sistem de monitorizare și management energetic.</p>
+                    </div>
+                    <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mt-10" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Iron Mountain depozit" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">Iron Mountain</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700">Depozit Stocare Securizată</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Anul</div>
+                                <div class="text-slate-700">2015</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">București, România</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Execuție Instalații Electrice și Sisteme Siguranță</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Sisteme Principale</div>
+                                <div class="text-slate-700">Iluminat, DSSI, UPS, Backup</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Finalizat & Operațional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Galerie Foto</h2>
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Iron Mountain exterior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Iluminat industrial LED" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tablouri electrice" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistem UPS" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Depozit interior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Detalii Tehnice</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Electrice & Iluminat</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Iluminat industrial LED de înaltă eficiență</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Corpuri de iluminat montate strategic pentru uniformitate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Tablouri de distribuție și protecție</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații prize și alimentare echipamente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Cablaj structurat pentru întreg complexul</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem de management energetic eficient</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500">
+                            <i class="ph-fill ph-shield-warning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Sisteme Siguranță & Backup</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem DSSI cu centrale de detecție inteligente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Detectoare optice de fum în toate zonele</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Sirene și dispozitive semnalizare vizuală/sonoră</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem UPS pentru alimentare neîntreruptibilă</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Baterii backup cu autonomie extinsă</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-red-500 mt-1 flex-shrink-0"></i>
+                            <span>Monitorizare 24/7 a tuturor sistemelor</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center reveal">Caracteristici Principale</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-package text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Stocare Securizată</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Depozit de înaltă securitate pentru liderul mondial Iron Mountain în management informațional și stocare documente.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-shield-warning text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Siguranță Maximă</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Sistem complet DSSI cu detectoare inteligente, alarmare și integrare cu sisteme de evacuare și monitorizare 24/7.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-battery-charging text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Continuitate Garantată</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Sistem UPS cu baterii backup și comutare automată pentru operare continuă a sistemelor critice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold text-zal-dark mb-6">Rezultate Proiect</h2>
+                <p class="text-lg text-slate-600 mb-12 leading-relaxed">Depozitul Iron Mountain București este complet operațional cu toate sistemele electrice, de iluminat, detecție incendiu și backup funcționând la parametri optimi. Proiectul asigură continuitatea serviciilor de stocare securizată 24/7.</p>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <i class="ph-fill ph-seal-check text-4xl text-zal-green"></i>
+                        <h3 class="text-2xl font-bold text-zal-dark">Certificări și Conformitate</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4">Toate sistemele au fost certificate conform standardelor:</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">ANRE - Instalații Electrice</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">IGSU - Detecție Incendiu</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">Sistem UPS Certificat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte Similare</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+                <a href="proiect-bricostore-baneasa.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-emerald-600 font-bold uppercase mb-2">Retail</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Bricostore Băneasa</h3>
+                        <p class="text-sm text-slate-600">Instalații complete - București</p>
+                    </div>
+                </a>
+                <a href="proiect-praktiker.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-emerald-600 font-bold uppercase mb-2">Retail</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Praktiker</h3>
+                        <p class="text-sm text-slate-600">Multiple locații - 2003-2005</p>
+                    </div>
+                </a>
+                <a href="proiect-wolf-plastics.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-purple-600 font-bold uppercase mb-2">Industrial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Wolf Plastics</h3>
+                        <p class="text-sm text-slate-600">Protecție incendiu - Dobroiești</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center reveal">
+                <div class="bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Ai un proiect logistic sau depozitare?</h3>
+                    <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Expertiza noastră în instalații pentru depozite include iluminat industrial, sisteme de siguranță și backup pentru operare continuă.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 active:scale-95">Solicită o Ofertă</a>
+                        <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">Vezi Toate Proiectele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-slate-300 transition z-10">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

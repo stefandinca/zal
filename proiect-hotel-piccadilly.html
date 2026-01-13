@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Piccadilly Constanța | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Project Image -->
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('img/proiecte/piccadilly/hotel-piccadilly-0.jpg');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Hotel Piccadilly Constanța</span>
+            </div>
+
+            <!-- Project Title -->
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-zal-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Comercial / Hotelier
+                    </span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Finalizat 2019
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Hotel Piccadilly Constanța</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Constanța, România</p>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">8.500</div>
+                        <div class="text-xs text-slate-300 uppercase">mp</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">1.2 MW</div>
+                        <div class="text-xs text-slate-300 uppercase">Putere instalată</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">14</div>
+                        <div class="text-xs text-slate-300 uppercase">Luni execuție</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">200+</div>
+                        <div class="text-xs text-slate-300 uppercase">Camere hotel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Main Description -->
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Hotel Piccadilly reprezintă unul dintre cele mai importante proiecte hoteliere realizate de ZAL în zona litoralului românesc. Situat în inima Constanței, hotelul de 4 stele oferă peste 200 de camere și facilități moderne pentru turismul de afaceri și recreere.
+                        </p>
+                        <p>
+                            Proiectul a presupus executarea completă a instalațiilor electrice și de automatizare pentru un complex hotelier modern, inclusiv instalații pentru restaurant, spa, sală de conferințe și facilități recreative. ZAL a asigurat proiectarea și execuția pentru toate sistemele electrice, de iluminat arhitectural, automatizare, detecție incendiu și sisteme de siguranță.
+                        </p>
+                        <p>
+                            O provocare majoră a fost integrarea sistemelor smart hotel pentru gestionarea eficientă a energiei și confortul oaspeților, cu control centralizat al iluminatului, climatizării și sistemelor de securitate pentru fiecare cameră.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mt-10" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-0.jpg"
+                         alt="Hotel Piccadilly - Vedere exterioară"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                </div>
+
+                <!-- Project Info Sidebar -->
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">Piccadilly Hotel Group</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Perioada</div>
+                                <div class="text-slate-700">Martie 2018 - Mai 2019</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">Constanța, România</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Proiectare + Execuție</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Valoare Contract</div>
+                                <div class="text-slate-700">Confidențial</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Finalizat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Galerie Foto</h2>
+
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <!-- Image 1 - Large -->
+                <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-1.jpg"
+                         alt="Hotel Piccadilly - Vedere exterioară"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-2.jpg"
+                         alt="Lobby hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-3.jpg"
+                         alt="Cameră hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-4.jpg"
+                         alt="Restaurant hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-5.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 6 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-6.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 7 -->
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/piccadilly/hotel-piccadilly-7.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Detalii Tehnice</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Scope of Work -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-wrench text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Lucrări Executate</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Post de transformare 2x630kVA cu tablouri MT/JT</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Tablou general de distribuție (TGD) și 45 tablouri secundare</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem de iluminat arhitectural și decorativ (peste 3.500 corpuri)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem BMS pentru gestionarea energiei la nivel de cameră</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem de detecție și alarmare incendiu adresabil</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Control acces camere cu carduri magnetice (RFID)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem de supraveghere video (CCTV) - 120 camere</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Grup electrogen backup 500kVA cu comutare automată</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Challenges -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-accent/10 rounded-full flex items-center justify-center text-zal-accent">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Provocări Tehnice</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 rounded-xl p-6 border-l-4 border-zal-accent">
+                            <h4 class="font-bold text-zal-dark mb-2">Sistem Smart Hotel</h4>
+                            <p class="text-sm text-slate-600">
+                                Implementarea unui sistem inteligent de management al camerelor care permite controlul automat al iluminatului, climatizării și perdelelor electrice în funcție de prezența oaspeților, cu economii energetice de până la 30%.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl p-6 border-l-4 border-zal-primary">
+                            <h4 class="font-bold text-zal-dark mb-2">Constrângeri de Timp</h4>
+                            <p class="text-sm text-slate-600">
+                                Termenul strict impus de sezonul estival a necesitat organizarea lucrului în trei ture, cu coordonare atentă între multiple echipe pentru respectarea deadline-ului de deschidere a hotelului.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl p-6 border-l-4 border-zal-green">
+                            <h4 class="font-bold text-zal-dark mb-2">Eficiență Energetică</h4>
+                            <p class="text-sm text-slate-600">
+                                Utilizarea exclusivă a corpurilor de iluminat LED cu driver programabil și senzori de prezență, reducând consumul energetic cu 45% față de soluțiile tradiționale pentru hoteluri similare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features / Highlights -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center reveal">Caracteristici Principale</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-lightbulb text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Iluminat Arhitectural</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Design personalizat de iluminat pentru fiecare zonă (camere, lobby, restaurant, spa) cu scenarii programabile pentru ambianță optimă.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-green rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-cpu text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Management Inteligent</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        BMS centralizat cu interfață grafică pentru monitorizare în timp real a consumurilor energetice și stării tuturor sistemelor hotelului.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-accent rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-shield-check text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Siguranță și Backup</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sistem redundant de alimentare cu energie prin grup electrogen 500kVA și UPS pentru circuite critice, asigurând funcționare continuă.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Outcome / Results -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold text-zal-dark mb-6">Rezultate</h2>
+                <p class="text-lg text-slate-600 mb-12 leading-relaxed">
+                    Proiectul a fost finalizat la timp și în buget, hotelul fiind deschis în sezonul estival 2019 cu toate sistemele funcționale. Clientul a apreciat calitatea execuției și profesionalismul echipei ZAL, rezultând în colaborări ulterioare pentru alte proprietăți din portofoliul grupului hotelier.
+                </p>
+
+                <!-- Results Grid -->
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">45%</div>
+                        <div class="text-sm text-slate-500 uppercase">Reducere consum energie</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">100%</div>
+                        <div class="text-sm text-slate-500 uppercase">Respectare deadline</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">0</div>
+                        <div class="text-sm text-slate-500 uppercase">Incidente de siguranță</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-zal-primary mb-2">24/7</div>
+                        <div class="text-sm text-slate-500 uppercase">Monitorizare sistem</div>
+                    </div>
+                </div>
+
+                <!-- Client Testimonial (Optional) -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <i class="ph-fill ph-quotes text-4xl text-zal-primary mb-4"></i>
+                    <blockquote class="text-lg text-slate-700 italic mb-4">
+                        "ZAL a demonstrat un profesionalism excepțional și o atenție deosebită la detalii. Sistemele implementate funcționează impecabil, iar sistemul de management energetic ne-a adus economii semnificative la costurile operaționale."
+                    </blockquote>
+                    <div class="font-bold text-zal-dark">Adrian Popescu</div>
+                    <div class="text-sm text-slate-500">General Manager - Piccadilly Hotel Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects / CTA -->
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte Similare</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+                <!-- Related Project 1 -->
+                <a href="proiect-arbo-residence.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Rezidențial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">ARBO Residence</h3>
+                        <p class="text-sm text-slate-600">Complex rezidențial premium cu 180 apartamente și sisteme smart home integrate.</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 2 -->
+                <a href="proiect-global-residence.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Rezidențial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Global Residence Mihai Bravu</h3>
+                        <p class="text-sm text-slate-600">Ansamblu rezidențial modern cu 240 apartamente și infrastructură smart city.</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 3 -->
+                <a href="proiect-rolex-marriott.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594915440248-1e419eba6611?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Comercial High-End</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Rolex Boutique JW Marriott</h3>
+                        <p class="text-sm text-slate-600">Instalații electrice premium pentru boutique Rolex în JW Marriott București.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center reveal">
+                <div class="bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Discutăm despre proiectul tău?</h3>
+                    <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Avem experiența și expertiza necesară pentru a transforma viziunea ta în realitate. Echipa noastră este gata să analizeze cerințele proiectului și să ofere soluții personalizate.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 active:scale-95">
+                            Solicită o Ofertă
+                        </a>
+                        <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                            Vezi Toate Proiectele
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <span class="bg-zal-primary px-2 rounded">ZAL</span> SA
+                    </span>
+                    <p>&copy; 2023 ZAL. Toate drepturile rezervate.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Termeni și condiții</a>
+                    <a href="#" class="hover:text-white transition">Politica de confidențialitate</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-slate-300 transition z-10">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(python -c:*)",
+      "Bash(pip install:*)",
+      "Bash(cat:*)",
+      "Bash(test:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(pip show:*)",
+      "Bash(python3:*)",
+      "Bash(where:*)"
+    ]
+  }
+}

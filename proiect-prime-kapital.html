@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Kapital București | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Prime Kapital</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-indigo-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Office</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Finalizat 2018</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Prime Kapital</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">București</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Real Estate</div>
+                        <div class="text-xs text-slate-300 uppercase">Corporate</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Premium</div>
+                        <div class="text-xs text-slate-300 uppercase">Finish</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Design</div>
+                        <div class="text-xs text-slate-300 uppercase">+ Execuție</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">2018</div>
+                        <div class="text-xs text-slate-300 uppercase">Finalizat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Prime Kapital este un dezvoltator imobiliar de top în România, cunoscut pentru proiecte premium precum AFI Palace Cotroceni. ZAL a realizat proiectarea și execuția completă a instalațiilor electrice pentru sediul lor de birouri din București, un proiect care reflectă standardele înalte ale companiei.
+                        </p>
+                        <p>
+                            Am executat instalații electrice complete cu finisaje premium, iluminat LED modern cu sisteme de control sofisticate, rețele structurate de date pentru comunicații rapide și sigure, precum și toate sistemele de securitate și protecție la incendiu necesare unui spațiu corporate de nivel înalt.
+                        </p>
+                        <p>
+                            Proiectul a necesitat coordonare strânsă cu echipa de arhitectură pentru integrarea perfectă a instalațiilor în designul interior premium. Toate echipamentele și materialele folosite sunt de top quality, reflectând poziționarea companiei Prime Kapital pe piața imobiliară de lux.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">Prime Kapital</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700">Birouri Corporate Premium</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Perioada</div>
+                                <div class="text-slate-700">2018</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">București</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Proiectare & Execuție</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Domeniu</div>
+                                <div class="text-slate-700">Instalații Electrice</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Operațional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Caracteristici Principale</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-indigo-500 transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-crown text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Finisaje Premium</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Instalații executate cu finisaje de cea mai înaltă calitate, folosind echipamente și materiale premium pentru o integrare perfectă în designul interior.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-zal-primary transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-lightning text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sisteme Inteligente</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Iluminat LED cu management inteligent, control centralizat și posibilitate de scenarii personalizate pentru fiecare zonă a biroului.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 reveal hover:border-zal-green transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-green rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-shield-check text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Securitate Avansată</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sisteme complete de detecție incendiu, control acces și monitorizare integrate pentru protecția maxim securității spațiului corporate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Instalații Realizate</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Electrice Premium</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Tablouri electrice cu automatizări și monitorizare</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Iluminat LED premium cu control inteligent pe zone</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Scenarii de iluminat personalizabile (work, meeting, presentation)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Circuite dedicate pentru echipamente IT și servere</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Prize integrate în mobilier și podele tehnice</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sistem UPS pentru continuitate alimentare</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-500">
+                            <i class="ph-fill ph-broadcast text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Comunicații & Securitate</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Rețea structurată Cat6A pentru transfer ultra-rapid</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Organizare profesională în rack-uri 19"</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem detecție și semnalizare incendiu adresabil</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Control acces inteligent cu carduri și biometrie</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem video surveillance integrat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-indigo-500 mt-1 flex-shrink-0"></i>
+                            <span>Infrastructure WiFi enterprise cu acoperire completă</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold mb-6">Parteneriat cu Dezvoltatori Premium</h2>
+                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                    Experiența ZAL în realizarea instalațiilor pentru birouri corporate de nivel înalt ne face partenerul ideal pentru dezvoltatori imobiliari care pun accent pe calitate și detalii de execuție impecabile.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                        <div class="text-4xl font-bold text-zal-accent mb-2">100%</div>
+                        <div class="text-sm text-slate-300">Calitate Premium</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                        <div class="text-4xl font-bold text-zal-accent mb-2">10+</div>
+                        <div class="text-sm text-slate-300">Ani Experiență</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-6">
+                        <div class="text-4xl font-bold text-zal-accent mb-2">50+</div>
+                        <div class="text-sm text-slate-300">Proiecte Corporate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h3 class="text-2xl font-bold text-zal-dark mb-4">Amenajare birouri corporate premium?</h3>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                ZAL oferă servicii complete de proiectare și execuție instalații electrice pentru dezvoltatori imobiliari și companii cu cerințe premium.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    Solicită Consultație
+                </a>
+                <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                    Vezi Alte Proiecte
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

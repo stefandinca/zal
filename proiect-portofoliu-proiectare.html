@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofoliu Proiectare DTAC/PT | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-gradient-to-br from-zal-dark via-slate-800 to-slate-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Portofoliu Proiectare</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Servicii de Inginerie</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">DTAC & PT</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Portofoliu Proiectare DTAC/PT</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Expertiza ZAL în proiectare și consultanță tehnică pentru instalații MEP</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">15+</div>
+                        <div class="text-xs text-slate-300 uppercase">Proiecte DTAC/PT</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">100k+</div>
+                        <div class="text-xs text-slate-300 uppercase">mp Proiectați</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">ANRE</div>
+                        <div class="text-xs text-slate-300 uppercase">Avizat</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Multi</div>
+                        <div class="text-xs text-slate-300 uppercase">Domenii</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-zal-dark mb-4">Servicii de Proiectare și Consultanță</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    ZAL oferă servicii complete de inginerie și consultanță tehnică în fazele DTAC (Documentație Tehnică pentru Autorizarea Construcției) și PT (Proiect Tehnic) pentru instalații MEP. Portofoliul nostru include proiecte din diverse domenii: rezidențial, comercial, industrial și infrastructură.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-fill ph-pencil-ruler text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-zal-dark mb-2">Proiectare DTAC</h3>
+                    <p class="text-sm text-slate-600">Documentație tehnică pentru autorizarea construcției conform normelor în vigoare</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-fill ph-blueprint text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-zal-dark mb-2">Proiect Tehnic (PT)</h3>
+                    <p class="text-sm text-slate-600">Proiecte detaliate de execuție cu planșe tehnice complete pentru toate instalațiile MEP</p>
+                </div>
+                <div class="text-center reveal">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-fill ph-check-circle text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-zal-dark mb-2">Avizare ANRE</h3>
+                    <p class="text-sm text-slate-600">Proiecte avizate ANRE pentru racordare și punere în funcțiune instalații electrice</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte de Proiectare</h2>
+
+            <!-- Rezidential Projects -->
+            <div class="mb-16 reveal">
+                <h3 class="text-2xl font-bold text-zal-dark mb-8 flex items-center gap-3">
+                    <i class="ph-fill ph-house text-blue-600"></i>
+                    Rezidențial
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Vilă P+1E Snagov</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Snagov, Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                380 mp + subsol
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2021
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Sanitare</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">HVAC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Casă P+1E Corbeanca</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Corbeanca, Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                220 mp
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Sanitare</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Duplex Bragadiru</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">DTAC</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Bragadiru, Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                2x140 mp
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2019
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">HVAC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Vilă Buftea</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Buftea, Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                450 mp P+1E+M
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2021
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">MEP Complete</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Smart Home</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Casă Chitila</h4>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Chitila, Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                195 mp P+1E
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Sanitare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Projects -->
+            <div class="mb-16 reveal">
+                <h3 class="text-2xl font-bold text-zal-dark mb-8 flex items-center gap-3">
+                    <i class="ph-fill ph-storefront text-indigo-600"></i>
+                    Comercial & Office
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 6 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Spațiu Comercial AFI</h4>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">DTAC</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                AFI Palace, București
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                150 mp retail
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">HVAC VRV</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Birouri Floreasca</h4>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Floreasca, București
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                600 mp open space
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2019
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">MEP Complete</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">BMS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Showroom Auto</h4>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Pipera, București
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                800 mp showroom
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2021
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Iluminat LED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Restaurant Centru Vechi</h4>
+                            <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full font-medium">DTAC</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Centru Vechi, București
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                250 mp HoReCa
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Sanitare</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Ventilație</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industrial & Infrastructure -->
+            <div class="mb-16 reveal">
+                <h3 class="text-2xl font-bold text-zal-dark mb-8 flex items-center gap-3">
+                    <i class="ph-fill ph-factory text-slate-600"></i>
+                    Industrial & Infrastructură
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 10 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Hală Producție</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Ploiești
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                1200 mp industrială
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2019
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice Industriale</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Ventilație</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Stație Pompare</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Ilfov
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                Infrastructură
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Automatizare</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Depozit Logistic</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">DTAC</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                A1, Chitila
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                2500 mp depozit
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2021
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Iluminat LED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 13 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Atelier Service Auto</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Otopeni
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                400 mp atelier
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2020
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Ventilație</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 14 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Rețea Electrică Cartier</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Voluntari
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                2.5 km LEA 0.4kV
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2019
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Rețele Electrice</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">Iluminat Stradal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 15 -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-3">
+                            <h4 class="text-lg font-bold text-zal-dark">Post Transformare</h4>
+                            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded-full font-medium">DTAC+PT</span>
+                        </div>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-map-pin text-slate-400"></i>
+                                Complex Rezidențial
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-ruler text-slate-400"></i>
+                                PT 630 kVA
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="ph-fill ph-calendar text-slate-400"></i>
+                                2021
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium mb-2">Servicii:</p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">MT/JT</span>
+                                <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">ANRE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-zal-dark to-slate-800 text-white">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h3 class="text-2xl font-bold mb-4">Aveți nevoie de servicii de proiectare MEP?</h3>
+            <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
+                ZAL oferă servicii complete de inginerie în fazele DTAC și PT pentru toate tipurile de instalații: electrice, sanitare, termice, ventilații, gaze naturale. Proiecte avizate ANRE și conforme cu normele în vigoare.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    Solicită Ofertă Proiectare
+                </a>
+                <a href="proiecte.html" class="bg-white/10 border border-white/30 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                    Vezi Toate Proiectele
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

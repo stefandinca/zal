@@ -4,103 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZAL | Instalații Generale, Proiectare & Audit Energetic</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        zal: {
-                            dark: '#0f172a',   // Slate 900
-                            primary: '#2563eb', // Blue 600
-                            accent: '#f59e0b',  // Amber 500
-                            green: '#10b981',   // Emerald 500
-                            light: '#f8fafc'    // Slate 50
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
 
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
-        }
-
-        /* Nav Link Underline Animation */
-        .nav-link {
-            position: relative;
-            padding-bottom: 2px;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #2563eb; /* zal-primary */
-            transition: width 0.3s ease-in-out;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .nav-link.active-link {
-            color: #2563eb;
-        }
-        .nav-link.active-link::after {
-            width: 100%;
-        }
-
-        /* Modern Button Base Style */
-        .btn-primary {
-            @apply bg-zal-primary text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 active:scale-95;
-        }
-    </style>
+    <script src="js/tailwind-config.js"></script>
 </head>
 <body class="bg-zal-light text-slate-700 antialiased">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" class="size-6 group-hover:rotate-12 transition-transform duration-300">
-                  <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-                </svg>
-                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span> 
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-16 w-auto group-hover:scale-110 transition-transform duration-300">
             </a>
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="#despre" class="nav-link" data-target="despre">Despre noi</a>
                 <a href="#servicii" class="nav-link" data-target="servicii">Servicii</a>
-                <a href="proiecte.html" class="nav-link hover:text-zal-primary transition">Proiecte</a>
+                <div class="relative group">
+                    <a href="proiecte.html" class="nav-link hover:text-zal-primary transition flex items-center gap-1">
+                        Proiecte
+                        <i class="ph ph-caret-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                        <div class="py-2">
+                            <a href="proiecte.html#retail" class="block px-4 py-3 text-sm text-slate-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-storefront text-lg text-amber-500"></i>
+                                    <span class="font-medium">Retail & Comercial</span>
+                                </div>
+                            </a>
+                            <a href="proiecte.html#horeca" class="block px-4 py-3 text-sm text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-bed text-lg text-orange-500"></i>
+                                    <span class="font-medium">HoReCa & Turism</span>
+                                </div>
+                            </a>
+                            <a href="proiecte.html#rezidential" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-buildings text-lg text-blue-500"></i>
+                                    <span class="font-medium">Rezidențial</span>
+                                </div>
+                            </a>
+                            <a href="proiecte.html#office" class="block px-4 py-3 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-desktop text-lg text-indigo-500"></i>
+                                    <span class="font-medium">Office & Smart Buildings</span>
+                                </div>
+                            </a>
+                            <a href="proiecte.html#industrial" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-800 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-factory text-lg text-slate-600"></i>
+                                    <span class="font-medium">Industrie & Instituțional</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#certificari" class="nav-link" data-target="certificari">Certificări</a>
                 <a href="#cariere" class="nav-link text-zal-accent hover:text-orange-600" data-target="cariere">Cariere</a>
             </div>
@@ -118,7 +83,19 @@
             <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
                 <a href="#despre" class="block text-slate-600">Despre noi</a>
                 <a href="#servicii" class="block text-slate-600">Servicii</a>
-                <a href="proiecte.html" class="block text-slate-600">Proiecte</a>
+                <div>
+                    <button id="mobile-proiecte-toggle" class="w-full flex items-center justify-between text-slate-600 py-1">
+                        <span>Proiecte</span>
+                        <i class="ph ph-caret-down text-sm transition-transform" id="mobile-proiecte-icon"></i>
+                    </button>
+                    <div id="mobile-proiecte-menu" class="hidden pl-4 mt-2 space-y-2 text-sm">
+                        <a href="proiecte.html#retail" class="block text-slate-500 hover:text-amber-600 py-1">Retail & Comercial</a>
+                        <a href="proiecte.html#horeca" class="block text-slate-500 hover:text-orange-600 py-1">HoReCa & Turism</a>
+                        <a href="proiecte.html#rezidential" class="block text-slate-500 hover:text-blue-600 py-1">Rezidențial</a>
+                        <a href="proiecte.html#office" class="block text-slate-500 hover:text-indigo-600 py-1">Office & Smart Buildings</a>
+                        <a href="proiecte.html#industrial" class="block text-slate-500 hover:text-slate-700 py-1">Industrie & Instituțional</a>
+                    </div>
+                </div>
                 <a href="#cariere" class="block text-zal-accent">Cariere</a>
                 <a href="#contact" class="block text-zal-primary">Contact</a>
             </div>
@@ -127,25 +104,25 @@
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1672954766776-cf2d157222b3?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
-        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute inset-0 hero-overlay-horizontal"></div>
 
         <div class="container mx-auto px-6 relative z-10 text-white mt-16">
             <div class="max-w-4xl animate-fade-in-up">
                 <div class="inline-flex items-center gap-2 bg-zal-primary/20 border border-zal-primary/30 rounded-full px-4 py-1 mb-6 text-sm font-medium text-blue-200 backdrop-blur-sm">
-                    <i class="ph-fill ph-buildings"></i> Instalații Generale & Audit Energetic
+                    <i class="ph-fill ph-buildings"></i> Construim calitate și confort, din 1994
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                    Proiectare, Execuție și Inginerie <br> <span class="text-zal-primary">la scară industrială.</span>
+                    Construim calitate și confort în fiecare proiect, <br> <span class="text-zal-primary">din 1994.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-                    ZAL oferă soluții complete pentru clădiri comerciale și ansambluri rezidențiale: de la instalații electrice, termice și sanitare, până la reabilitare energetică și infrastructură telecom.
+                    Oferim soluții de instalații electrice, sanitare și HVAC pentru a transforma proiectul tău în realitate.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#servicii" class="bg-zal-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-600/40 active:scale-95 text-center">
                         Vezi Serviciile
                     </a>
                     <a href="#contact" class="bg-white/5 border border-slate-400/50 hover:bg-white/10 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 text-center backdrop-blur-sm">
-                        Solicită Ofertă
+                        Cere Ofertă
                     </a>
                 </div>
             </div>
@@ -157,28 +134,23 @@
             <div class="grid md:grid-cols-2 gap-12 items-start reveal">
                 <div>
                     <h2 class="text-sm font-bold text-zal-primary tracking-widest uppercase mb-2">Despre ZAL</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-zal-dark mb-6">Societate specializată și autorizată</h3>
-                    
+                    <h3 class="text-3xl md:text-4xl font-bold text-zal-dark mb-6">Companie cu experiență din 1994</h3>
+
                     <div class="prose text-slate-600 leading-relaxed mb-6">
                         <p class="mb-4">
-                            <strong>ZAL</strong> este o societate specializată și autorizată pentru proiectarea și execuția de instalații complexe. Activitatea noastră acoperă întreg spectrul de necesități pentru clădiri moderne și infrastructură.
+                            <strong>ZAL INVESTMENTS COMPANY S.A.</strong>, înființată în anul 1994, este o companie cu activități principale în domeniul construcțiilor, instalațiilor pentru construcții și automatizărilor.
                         </p>
                         <p class="mb-4">
-                            Nu ne limităm doar la execuție. Oferim servicii integrate de inginerie, de la elaborarea certificatelor de performanță energetică și auditul clădirilor, până la soluții concrete de reabilitare energetică și instalații de automatizare.
+                            Oferim servicii complete de proiectare, procurare, execuție, supervizare, întreținere și service, precum și formare profesională. Datorită experienței acumulate, compania este capabilă să abordeze investiții de mici și medii dimensiuni, cum ar fi construcții rezidențiale și blocuri de locuințe, precum și construcții industriale sau construcții speciale, executate prin finanțare proprie sau comenzi.
                         </p>
-                        <ul class="grid grid-cols-1 gap-2 mt-4 font-medium text-slate-700">
-                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Instalații Electrice & Telecomunicații</li>
-                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Sanitare, Termice & Canalizare</li>
-                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-green"></i> Audit & Reabilitare Energetică</li>
-                        </ul>
                     </div>
                 </div>
                 <div class="relative mt-8 md:mt-0 group">
                     <div class="absolute -inset-4 bg-slate-100 rounded-2xl transform -rotate-2 z-0 transition-transform duration-500 group-hover:rotate-0"></div>
                     <img src="https://images.unsplash.com/photo-1758101755915-462eddc23f57?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Echipa ZAL" class="relative rounded-xl shadow-xl z-10 w-full h-auto object-cover transform transition duration-500 group-hover:scale-[1.02]">
                     <div class="absolute -bottom-6 -left-6 bg-zal-dark text-white p-6 rounded-xl shadow-lg z-20 hidden md:block">
-                        <div class="text-3xl font-bold text-zal-accent mb-1">100%</div>
-                        <div class="text-xs uppercase tracking-wider text-slate-400">Conformitate<br>Normative</div>
+                        <div class="text-3xl font-bold text-zal-accent mb-1">30+</div>
+                        <div class="text-xs uppercase tracking-wider text-slate-400">Ani<br>Experiență</div>
                     </div>
                 </div>
             </div>
@@ -191,9 +163,9 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Acreditări</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Certificări și Acreditări</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto text-lg">
-                    Operăm în deplină legalitate și siguranță. Deținem toate autorizațiile necesare pentru proiecte complexe.
+                    ZAL INVESTMENTS COMPANY S.A este certificată SR EN ISO 9001:2015 pentru proiectare, execuție, construcții montaj, echipamente și instalații electrice de joasă și medie tensiune.
                 </p>
             </div>
 
@@ -204,16 +176,16 @@
                         <span class="bg-zal-accent/10 text-zal-accent text-xs font-bold px-2 py-1 rounded uppercase">Licențiat</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">Atestat ANRE</h3>
-                    <p class="text-slate-400 text-sm">Proiectare și execuție instalații electrice (joasă și medie tensiune).</p>
+                    <p class="text-slate-400 text-sm">Proiectare și executare de instalații electrice interioare la 0,4 kV.</p>
                 </div>
-                
+
                 <div class="group bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-6 rounded-xl hover:bg-slate-800 hover:border-zal-green transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-green-500/10 cursor-default reveal">
                     <div class="flex items-center justify-between mb-4">
-                        <i class="ph-fill ph-leaf text-4xl text-zal-green transition-transform group-hover:scale-110"></i>
-                        <span class="bg-zal-green/10 text-zal-green text-xs font-bold px-2 py-1 rounded uppercase">Expertiză</span>
+                        <i class="ph-fill ph-fire text-4xl text-red-400 transition-transform group-hover:scale-110"></i>
+                        <span class="bg-red-400/10 text-red-400 text-xs font-bold px-2 py-1 rounded uppercase">IGSU</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Auditor Energetic</h3>
-                    <p class="text-slate-400 text-sm">Certificate de performanță și audit energetic grad I & II.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Instalații Incendiu</h3>
+                    <p class="text-slate-400 text-sm">Proiectare și instalare sisteme de limitare și stingere a incendiilor.</p>
                 </div>
 
                 <div class="group bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-6 rounded-xl hover:bg-slate-800 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 cursor-default reveal">
@@ -225,13 +197,13 @@
                     <p class="text-slate-400 text-sm">Sistem integrat de management al calității. Procese verificate.</p>
                 </div>
 
-                <div class="group bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-6 rounded-xl hover:bg-slate-800 hover:border-red-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-red-500/10 cursor-default reveal">
+                <div class="group bg-slate-800/60 backdrop-blur-sm border border-slate-700 p-6 rounded-xl hover:bg-slate-800 hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10 cursor-default reveal">
                     <div class="flex items-center justify-between mb-4">
-                        <i class="ph-fill ph-hard-hat text-4xl text-red-400 transition-transform group-hover:scale-110"></i>
-                        <span class="bg-red-400/10 text-red-400 text-xs font-bold px-2 py-1 rounded uppercase">ISC & SSM</span>
+                        <i class="ph-fill ph-hard-hat text-4xl text-orange-400 transition-transform group-hover:scale-110"></i>
+                        <span class="bg-orange-400/10 text-orange-400 text-xs font-bold px-2 py-1 rounded uppercase">ISCIR</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Siguranță & ISC</h3>
-                    <p class="text-slate-400 text-sm">Respectăm riguros normele Inspectoratului de Stat în Construcții.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Autorizație ISCIR</h3>
+                    <p class="text-slate-400 text-sm">Montarea aparate consumatoare și cazane sub 400 kW.</p>
                 </div>
             </div>
         </div>
@@ -241,73 +213,100 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Domenii de Activitate</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Acoperim toate fazele proiectului: de la proiectare (DTAC, PTh), la execuție și măsurători finale.</p>
+                <p class="text-slate-400 max-w-2xl mx-auto">Servicii complete de proiectare și execuție pentru instalații electrice, sanitare, termice și automatizări.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Executie - Instalatii Electrice -->
                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-zal-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/20 reveal">
                     <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-zal-primary mb-4">
                         <i class="ph-fill ph-lightning text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Electrice & Automatizări</h3>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
-                        <li>Proiectare și execuție instalații electrice</li>
-                        <li>Instalații de automatizare (BMS)</li>
-                        <li>Smart Building ("Casă inteligentă")</li>
+                    <h3 class="text-xl font-bold mb-2">Instalații Electrice</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Instalații electrice interioare curenti tari</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Instalații electrice interioare curenti slabi</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Instalații de automatizare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Retele electrice exterioare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Racorduri electrice</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i> <span>Semnalizare, alarmare și alertare incendiu</span></li>
                     </ul>
                 </div>
 
+                <!-- Executie - Instalatii Sanitare -->
                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-900/20 reveal">
                     <div class="w-12 h-12 bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-500 mb-4">
                         <i class="ph-fill ph-drop text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Sanitare & Termice</h3>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
-                        <li>Proiectare instalații sanitare</li>
-                        <li>Instalații și rețele termice</li>
-                        <li>Instalații de canal și canalizare</li>
+                    <h3 class="text-xl font-bold mb-2">Instalații Sanitare</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Instalații sanitare interioare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Instalații sanitare exterioare - apă, canal</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Stații de ridicare a presiunii</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Instalații cu panouri solare pentru ACM</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Încălzitoare apă instantanee sau cu acumulare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i> <span>Instalații de limitare și stingere a incendiilor</span></li>
                     </ul>
                 </div>
 
+                <!-- Executie - Instalatii HVAC -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-zal-green transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-900/20 reveal">
+                    <div class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-zal-green mb-4">
+                        <i class="ph-fill ph-wind text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Încălzire, Ventilare-Climatizare</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Instalații de încălzire clasice cu radiatoare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Instalații de încălzire în pardoseală</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Montare tubulatură de ventilație</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Încălzire/răcire cu ventilo-convectoare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Montaj centrale termice - ISCIR PT A1 P<400kW</span></li>
+                    </ul>
+                </div>
+
+                <!-- Constructii Civile -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-900/20 reveal">
+                    <div class="w-12 h-12 bg-indigo-900/30 rounded-lg flex items-center justify-center text-indigo-400 mb-4">
+                        <i class="ph-fill ph-buildings text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Construcții</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-indigo-400 mt-1 flex-shrink-0"></i> <span>Construcție clădiri individuale la cheie</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-indigo-400 mt-1 flex-shrink-0"></i> <span>Construcție clădiri tip bloc la cheie</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-indigo-400 mt-1 flex-shrink-0"></i> <span>Hale industriale</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-indigo-400 mt-1 flex-shrink-0"></i> <span>Hale de depozitare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-indigo-400 mt-1 flex-shrink-0"></i> <span>Construcții speciale: antene, PT</span></li>
+                    </ul>
+                </div>
+
+                <!-- Proiectare -->
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-900/20 reveal">
+                    <div class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 mb-4">
+                        <i class="ph-fill ph-ruler text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Proiectare</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Instalații electrice și rețele exterioare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Instalații și rețele termice</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Instalații sanitare și rețele de apă și canal</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Instalații ventilare-climatizare-desfumare</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Telecomunicații și automatizări</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-purple-400 mt-1 flex-shrink-0"></i> <span>Structuri de rezistență</span></li>
+                    </ul>
+                </div>
+
+                <!-- Audit Energetic -->
                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-zal-green transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-900/20 reveal">
                     <div class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-zal-green mb-4">
                         <i class="ph-fill ph-leaf text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Eficiență Energetică</h3>
-                    <ul class="text-slate-400 text-sm space-y-2 list-disc list-inside">
-                        <li>Certificat de performanță energetică</li>
-                        <li>Audit energetic al clădirilor</li>
-                        <li>Soluții de reabilitare energetică</li>
+                    <h3 class="text-xl font-bold mb-2">Audit & Certificare Energetică</h3>
+                    <ul class="text-slate-400 text-sm space-y-2">
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Expertiză energetică</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Eliberare certificat de performanță energetică</span></li>
+                        <li class="flex items-start gap-2"><i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i> <span>Soluții de reabilitare energetică</span></li>
                     </ul>
                 </div>
-
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 hover:border-indigo-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-900/20 reveal">
-                    <div class="w-12 h-12 bg-indigo-900/30 rounded-lg flex items-center justify-center text-indigo-400 mb-4">
-                        <i class="ph-fill ph-broadcast text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Telecomunicații</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-3">
-                        Proiectare și execuție infrastructură pentru voce-date, rețele structurate și fibră optică.
-                    </p>
-                </div>
-
-                <div class="md:col-span-2 lg:col-span-2 bg-gradient-to-r from-slate-800 to-slate-800/50 p-8 rounded-2xl border border-slate-700 reveal">
-                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-3">
-                                <i class="ph-fill ph-ruler text-zal-accent text-2xl"></i>
-                                <h3 class="text-xl font-bold">Servicii de Inginerie Integrată</h3>
-                            </div>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Coordonarea interdisciplinară reduce erorile de execuție și optimizează costurile pentru beneficiar.
-                            </p>
-                        </div>
-                        <a href="#contact" class="shrink-0 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105">
-                            Solicită Consultanță
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -322,40 +321,40 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <a href="proiecte.html#office" class="block h-full">
+                <a href="proiecte.html#rezidential" class="block h-full">
                     <div class="group relative overflow-hidden rounded-xl cursor-pointer reveal h-full shadow-lg hover:shadow-2xl transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cladire Birouri" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cladire Rezidentiala" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
+                            <span class="text-zal-accent text-xs font-bold uppercase mb-1">Rezidențial</span>
+                            <h4 class="text-white text-xl font-bold group-hover:text-zal-accent transition-colors">Ansambluri Rezidențiale</h4>
+                            <p class="text-slate-300 text-sm mt-2 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                                Instalații complete pentru blocuri și complexe rezidențiale. Vezi detalii →
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="proiecte.html#comercial" class="block h-full">
+                    <div class="group relative overflow-hidden rounded-xl cursor-pointer reveal h-full shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Spatiu Comercial" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
                             <span class="text-zal-accent text-xs font-bold uppercase mb-1">Comercial</span>
-                            <h4 class="text-white text-xl font-bold group-hover:text-zal-accent transition-colors">Clădiri de Birouri</h4>
+                            <h4 class="text-white text-xl font-bold group-hover:text-zal-accent transition-colors">Spații Comerciale</h4>
                             <p class="text-slate-300 text-sm mt-2 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                                Instalații electrice, HVAC și BMS integrat. Vezi detalii ->
+                                Amenajări magazine, birouri și spații HoReCa. Vezi detalii →
                             </p>
                         </div>
                     </div>
                 </a>
 
-                <a href="proiecte.html#edilitar" class="block h-full">
+                <a href="proiecte.html#industrial" class="block h-full">
                     <div class="group relative overflow-hidden rounded-xl cursor-pointer reveal h-full shadow-lg hover:shadow-2xl transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1734280054706-06ef5a398fe1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Infrastructura" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Constructie Industriala" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                            <span class="text-zal-accent text-xs font-bold uppercase mb-1">Infrastructură</span>
-                            <h4 class="text-white text-xl font-bold group-hover:text-zal-accent transition-colors">Rețele Edilitare</h4>
+                            <span class="text-zal-green text-xs font-bold uppercase mb-1">Industrial</span>
+                            <h4 class="text-white text-xl font-bold group-hover:text-zal-green transition-colors">Construcții Industriale</h4>
                             <p class="text-slate-300 text-sm mt-2 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                                Execuție rețele termice și canalizare. Vezi detalii ->
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="proiecte.html#audit" class="block h-full">
-                    <div class="group relative overflow-hidden rounded-xl cursor-pointer reveal h-full shadow-lg hover:shadow-2xl transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Reabilitare" class="w-full h-80 object-cover transition duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
-                            <span class="text-zal-green text-xs font-bold uppercase mb-1">Eficiență Energetică</span>
-                            <h4 class="text-white text-xl font-bold group-hover:text-zal-green transition-colors">Reabilitări & Audit</h4>
-                            <p class="text-slate-300 text-sm mt-2 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                                Modernizare instalații și certificate energetice. Vezi detalii ->
+                                Hale industriale și construcții speciale. Vezi detalii →
                             </p>
                         </div>
                     </div>
@@ -373,7 +372,7 @@
                 </div>
                 <h2 class="text-3xl md:text-4xl font-bold text-zal-dark mb-4">Construiește o carieră solidă la ZAL</h2>
                 <p class="text-slate-600 max-w-2xl mx-auto">
-                    Oferim stabilitate, proiecte de anvergură (fără rezidențial individual) și echipamente de top.
+                    Oferim stabilitate, proiecte de anvergură și echipamente de top.
                 </p>
             </div>
 
@@ -505,53 +504,14 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
                     <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
-                         <span class="bg-zal-primary px-2 rounded">ZAL</span> SA
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
                     </span>
-                    <p>&copy; 2023 ZAL. Toate drepturile rezervate.</p>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-
-        // Reveal Animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-        // Active Menu State on Scroll (Spy)
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        function scrollActive() {
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 150; // Adjustment for header height
-                const sectionId = current.getAttribute("id");
-
-                // Find the link that points to this section id
-                const navLink = document.querySelector(`.nav-link[href*="#${sectionId}"]`);
-                
-                if(navLink) {
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        navLink.classList.add("active-link");
-                    } else {
-                        navLink.classList.remove("active-link");
-                    }
-                }
-            });
-        }
-        window.addEventListener("scroll", scrollActive);
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habio Residence București | ZAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('img/proiecte/habio/habio-0.webp');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Habio Residence</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-zal-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Rezidențial</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Finalizat 2021</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Ansamblu Rezidențial Habio Residence</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">București, Sector 3</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">91</div>
+                        <div class="text-xs text-slate-300 uppercase">Apartamente</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">2</div>
+                        <div class="text-xs text-slate-300 uppercase">Scări</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">P+6</div>
+                        <div class="text-xs text-slate-300 uppercase">Etaje</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">2021</div>
+                        <div class="text-xs text-slate-300 uppercase">Finalizat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>Habio Residence este un ansamblu rezidențial modern din sectorul 3 al Bucureștiului, pentru care ZAL a executat integral toate instalațiile electrice. Proiectul cuprinde 2 scări cu regim de înălțime parter plus 6 etaje, totalizând 91 de apartamente.</p>
+                        <p>Complexitatea proiectului a constat în implementarea unei infrastructuri electrice complete, incluzând instalații pentru iluminat și prize în toate apartamentele, sistem avansat de detecție și semnalizare incendiu, instalații de telefonie fixă și televiziune digitală, precum și sistem complet pentru parcare cu stație de hidrofor.</p>
+                        <p>Proiectul a fost realizat pentru beneficiarul EZ PROJECT SRL în 2021, cu accent pe calitate, siguranță și conformitate cu toate normele în vigoare.</p>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">EZ PROJECT SRL</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">București, Sector 3</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">An Finalizare</div>
+                                <div class="text-slate-700">2021</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Configurație</div>
+                                <div class="text-slate-700">2 scări × P+6E = 91 apartamente</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Execuție Instalații Electrice</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Finalizat & Ocupat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Galerie Foto</h2>
+
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <!-- Image 1 - Large -->
+                <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-1.webp"
+                         alt="Hotel Piccadilly - Vedere exterioară"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-2.jpg"
+                         alt="Lobby hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-3.jpg"
+                         alt="Cameră hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-4.jpg"
+                         alt="Restaurant hotel"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-5.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 6 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-6.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 7 -->
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="img/proiecte/habio/habio-7.jpg"
+                         alt="Sala de conferințe"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Instalații Executate</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="reveal bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Electrice</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații electrice pentru iluminat și prize în toate apartamentele</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalație de detecție și semnalizare incendiu</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalație de telefonie fixă, televiziune digitală și IP-TV</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații alimentare consumatori cu rol în securitate la incendiu</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Tablouri electrice pentru protecție și distribuție</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Sisteme de prevenire la îngheț a conductelor</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații de protecție împotriva trăsnetului tip PDA</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Corpuri de iluminat arhitecturale, liniare, spoturi, urgență</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Amenajare instalații electrice parcare și stație de hidrofor</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal bg-slate-900 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-6">Caracteristici Principale</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="ph-fill ph-shield-check text-3xl text-zal-primary"></i>
+                                <h4 class="text-lg font-bold">Siguranță Completă</h4>
+                            </div>
+                            <p class="text-slate-300 text-sm">Sistem integrat detecție incendiu, protecție trăsnet PDA și alimentare securizată pentru toate sistemele de siguranță.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="ph-fill ph-television text-3xl text-zal-accent"></i>
+                                <h4 class="text-lg font-bold">Conectivitate Modernă</h4>
+                            </div>
+                            <p class="text-slate-300 text-sm">Infrastructură completă: telefonie fixă, internet, TV digitală și IP-TV pentru toate cele 91 de apartamente.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="ph-fill ph-snowflake text-3xl text-blue-400"></i>
+                                <h4 class="text-lg font-bold">Protecție Anti-Îngheț</h4>
+                            </div>
+                            <p class="text-slate-300 text-sm">Sisteme specializate de prevenire îngheț pentru conducte și armături, esențiale pentru confort pe tot parcursul anului.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h3 class="text-2xl font-bold text-zal-dark mb-4">Ai un proiect rezidențial?</h3>
+            <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Experiența noastră în ansambluri rezidențiale ne face partenerul ideal pentru proiectul tău.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95">
+                    Solicită o Ofertă
+                </a>
+                <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                    Vezi Toate Proiectele
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

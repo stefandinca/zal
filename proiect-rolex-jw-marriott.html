@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin ROLEX - JW Marriott București | ZAL</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Project Image -->
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1594534475735-feecf3b7c439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">ROLEX JW Marriott</span>
+            </div>
+
+            <!-- Project Title -->
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-amber-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Retail High-End
+                    </span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Finalizat 2019
+                    </span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Magazin ROLEX - JW Marriott Grand Hotel</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Calea 13 Septembrie, București</p>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Luxury</div>
+                        <div class="text-xs text-slate-300 uppercase">Segment</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">100%</div>
+                        <div class="text-xs text-slate-300 uppercase">LED Premium</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Smart</div>
+                        <div class="text-xs text-slate-300 uppercase">HVAC Control</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">5★</div>
+                        <div class="text-xs text-slate-300 uppercase">Hotel Premium</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Main Description -->
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>
+                            Amenajarea magazinului ROLEX din cadrul prestigiosului JW Marriott Grand Hotel București reprezintă unul dintre cele mai sofisticate proiecte de retail de lux realizate de ZAL. Proiectul a necesitat o atenție deosebită la detalii și respectarea standardelor internaționale ROLEX pentru amenajări boutique.
+                        </p>
+                        <p>
+                            ZAL a asigurat proiectarea și execuția completă a tuturor instalațiilor: electrice (curenti tari și slabi), sanitare, și HVAC. Complexitatea proiectului a constat în integrarea instalațiilor în designul arhitectural premium al magazinului, menținând totodată funcționalitatea și eficiența energetică necesare unui spațiu comercial de lux.
+                        </p>
+                        <p>
+                            Iluminatul special a fost un element crucial - am implementat un sistem de iluminat arhitectural cu proiectoare, lampi ornamentale și bandă LED, creat special pentru a valorifica produsele de ceasornicărie de lux și a crea atmosfera exclusivistă specifică brandului ROLEX.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Info Sidebar -->
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700 font-medium">JW Marriott Grand Hotel</div>
+                                <div class="text-slate-600 text-xs">Calea 13 Septembrie, București</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700">Magazin Retail High-End</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">An Finalizare</div>
+                                <div class="text-slate-700">2019</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Segment</div>
+                                <div class="text-slate-700">Luxury Retail - Ceasornicărie</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Proiectare + Execuție Completă</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Faza</div>
+                                <div class="text-slate-700">PT (Proiect Tehnic)</div>
+                            </div>
+
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Operațional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Galerie Foto</h2>
+
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <!-- Image 1 - Large -->
+                <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1594534475735-feecf3b7c439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="ROLEX Boutique interior"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1586864387634-22746be045e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="Iluminat vitrine"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1565440962783-f87efdea99fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="Detalii iluminat"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1590136577343-2fc66e572580?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                         alt="Zona produs"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                         alt="JW Marriott exterior"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Detalii Tehnice</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Electrical Works -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
+                            <i class="ph-fill ph-lightning text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Electrice</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalații de iluminat și prize - circuit dedicat pentru spațiu comercial</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Alimentare cu energie electrică echipamente magazin (vitrine, display-uri)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Alimentare și control rulouri ferestre automatizate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Instalare și racordare tablouri electrice în spațiu propriu dedicat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-zal-primary mt-1 flex-shrink-0"></i>
+                            <span>Proiectare instalații electrice curenti tari și curenti slabi - Faza PT</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 bg-blue-50 rounded-xl p-6 border-l-4 border-zal-primary">
+                        <h4 class="font-bold text-zal-dark mb-2 flex items-center gap-2">
+                            <i class="ph-fill ph-lightbulb text-zal-primary"></i>
+                            Iluminat Special Premium
+                        </h4>
+                        <ul class="text-sm text-slate-600 space-y-2 mt-3">
+                            <li class="flex items-start gap-2">
+                                <i class="ph-fill ph-check text-zal-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span>Proiectoare LED direcționale pentru iluminat produse</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="ph-fill ph-check text-zal-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span>Lampi ornamentale de design pentru atmosferă exclusivistă</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="ph-fill ph-check text-zal-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span>Bandă LED integrată pentru iluminat arhitectural indirect</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="ph-fill ph-check text-zal-primary mt-0.5 flex-shrink-0 text-xs"></i>
+                                <span>Sistem de control iluminat cu scenarii prestabilite</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sanitary & HVAC Works -->
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="ph-fill ph-drop text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Instalații Sanitare</h3>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Instalație de stingere incendiu cu sprinklere conform normelor retail</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Instalații de alimentare cu apă rece pentru spații sanitare</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Instalații de canalizare integrate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Proiectare instalații sanitare și PSI - Faza PT</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 bg-zal-green/10 rounded-full flex items-center justify-center text-zal-green">
+                                <i class="ph-fill ph-wind text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-zal-dark">Instalații HVAC</h3>
+                        </div>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i>
+                                <span>Instalații de încălzire/răcire prin ventiloconvectori</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i>
+                                <span>Sistem pompă de căldură pe buclă de apă - eficiență maximă</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i>
+                                <span>Control climatizare integrat pentru confort optim produse și clienți</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-check text-zal-green mt-1 flex-shrink-0"></i>
+                                <span>Proiectare HVAC sistem performant - Faza PT</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fire Detection System -->
+            <div class="mt-12 reveal">
+                <div class="bg-red-50 rounded-2xl p-8 border border-red-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500">
+                            <i class="ph-fill ph-fire-extinguisher text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Sistem Detecție și Semnalizare Incendiu</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        Proiectare și execuție sistem complet de detecție și semnalizare incendiu (Faza PT) conform normelor IGSU pentru spații comerciale în clădiri publice.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-start gap-2">
+                            <i class="ph-fill ph-check text-red-500 mt-0.5"></i>
+                            <span class="text-slate-600">Detectori de fum adresabili</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph-fill ph-check text-red-500 mt-0.5"></i>
+                            <span class="text-slate-600">Butoane manuale de incendiu</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph-fill ph-check text-red-500 mt-0.5"></i>
+                            <span class="text-slate-600">Sirene și dispozitive de avertizare</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph-fill ph-check text-red-500 mt-0.5"></i>
+                            <span class="text-slate-600">Integrare cu sistemul central hotel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features / Highlights -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center reveal">Caracteristici Principale</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-lightbulb text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Iluminat Premium</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sistem sofisticat de iluminat cu proiectoare LED, lampi ornamentale și bandă LED arhitecturală, creat special pentru a evidenția produsele de lux ROLEX.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-green rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-thermometer text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Climate Control Perfect</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sistem HVAC cu pompă de căldură pe buclă de apă și ventiloconvectori, menținând temperatura și umiditatea ideale pentru produsele de ceasornicărie.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-zal-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-shield-check text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Siguranță Maximă</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sistem complet de detecție incendiu, sprinklere, și integrare cu sistemul de securitate al hotelului JW Marriott pentru protecție 24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Outcome / Results -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold text-zal-dark mb-6">Rezultate Proiect</h2>
+                <p class="text-lg text-slate-600 mb-12 leading-relaxed">
+                    Magazinul ROLEX din JW Marriott București a fost finalizat în 2019 și funcționează cu succes ca unul dintre cele mai prestigioase boutique-uri ROLEX din România. Proiectul demonstrează capacitatea ZAL de a livra instalații de înaltă calitate pentru segmentul luxury retail, respectând standardele internaționale stricte ale brandului.
+                </p>
+
+                <!-- Results Grid -->
+                <div class="grid md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <div class="text-4xl font-bold text-amber-500 mb-2">Premium</div>
+                        <div class="text-sm text-slate-500 uppercase">Segment Luxury</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-500 mb-2">100%</div>
+                        <div class="text-sm text-slate-500 uppercase">Conformitate ROLEX</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-500 mb-2">LED</div>
+                        <div class="text-sm text-slate-500 uppercase">Iluminat premium</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-amber-500 mb-2">2019</div>
+                        <div class="text-sm text-slate-500 uppercase">Operațional</div>
+                    </div>
+                </div>
+
+                <!-- Certification Note -->
+                <div class="bg-amber-50 rounded-2xl p-8 border border-amber-100">
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <i class="ph-fill ph-crown text-4xl text-amber-500"></i>
+                        <h3 class="text-2xl font-bold text-zal-dark">Standard International Luxury Retail</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        Toate instalațiile respectă standardele ROLEX pentru boutique-uri:
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-amber-200">Iluminat Certificat</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-amber-200">Climate Control Precis</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-amber-200">IGSU - Detecție PSI</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-amber-200">Sprinklere Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects / CTA -->
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte Similare</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+                <!-- Related Project 1 -->
+                <a href="#" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-amber-500 font-bold uppercase mb-2">Retail</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Amenajare SABON - AFI Palace</h3>
+                        <p class="text-sm text-slate-600">Sistem HVAC și iluminat premium - Cotroceni Mall</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 2 -->
+                <a href="proiect-hotel-piccadilly.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-accent font-bold uppercase mb-2">HoReCa</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Hotel Piccadilly</h3>
+                        <p class="text-sm text-slate-600">P+4E, instalații complete - Mamaia, Constanța</p>
+                    </div>
+                </a>
+
+                <!-- Related Project 3 -->
+                <a href="proiecte.html#comercial" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-zal-primary font-bold uppercase mb-2">Office</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Amenajare Birouri Philip Morris</h3>
+                        <p class="text-sm text-slate-600">Sistem KNX, instalații complete - Otopeni</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center reveal">
+                <div class="bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Ai un proiect retail sau comercial?</h3>
+                    <p class="text-slate-600 mb-8 max-w-2xl mx-auto">
+                        Avem experiența și expertiza necesară pentru spații comerciale de orice tip, de la magazine de lux până la centre comerciale. Echipa noastră înțelege cerințele specifice ale retail-ului modern.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 active:scale-95">
+                            Solicită o Ofertă
+                        </a>
+                        <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">
+                            Vezi Toate Proiectele
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-slate-300 transition z-10">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

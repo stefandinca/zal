@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazaki Brăila | ZAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-zal-light text-slate-700 antialiased">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="size-6 group-hover:rotate-12 transition-transform duration-300">
+                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#despre" class="nav-link">Despre noi</a>
+                <a href="index.html#servicii" class="nav-link">Servicii</a>
+                <a href="proiecte.html" class="nav-link active-link">Proiecte</a>
+                <a href="index.html#certificari" class="nav-link">Certificări</a>
+                <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
+            </div>
+            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+                Contactează-ne
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-zal-dark">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
+                <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
+                <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
+                <a href="proiecte.html" class="block text-zal-primary font-bold">Proiecte</a>
+                <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
+                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 bg-zal-dark overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-300 mb-6 animate-fade-in-up">
+                <a href="index.html" class="hover:text-white transition">Acasă</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <a href="proiecte.html" class="hover:text-white transition">Proiecte</a>
+                <i class="ph ph-caret-right text-xs"></i>
+                <span class="text-white">Yazaki Brăila</span>
+            </div>
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-4 animate-fade-in-up">
+                    <span class="bg-purple-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Industrial - Automotive</span>
+                    <span class="bg-white/10 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Finalizat 2015</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Yazaki Brăila</h1>
+                <p class="text-xl text-slate-300 mb-6 animate-fade-in-up">Brăila, România</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in-up">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">450 mp</div>
+                        <div class="text-xs text-slate-300 uppercase">Rampe Camioane</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">Snow Melting</div>
+                        <div class="text-xs text-slate-300 uppercase">Sistem Electric</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">600 kW</div>
+                        <div class="text-xs text-slate-300 uppercase">Automatizare</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-white mb-1">100%</div>
+                        <div class="text-xs text-slate-300 uppercase">Operațional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h2 class="text-3xl font-bold text-zal-dark mb-6">Despre Proiect</h2>
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-4">
+                        <p>Yazaki Brăila este o hală industrială modernă pentru care ZAL a realizat în 2015 sisteme complexe de dezgheță electrică pentru rampe camioane și automatizare avansată pentru cazane industriale, prin parteneriat cu TIAB S.A.</p>
+                        <p><strong>Sistem Snow Melting Electric (450 mp):</strong> Am proiectat și executat un sistem electric de topire a zăpezii pentru rampele de acces camioane pe o suprafață de 450 mp. Sistemul include tablou electric de putere și automatizare, legare echipontențială completă, 4 senzori de temperatură/umiditate pentru 2 zone de control independent și încălzire jgheaburi pentru prevenirea formării de gheață.</p>
+                        <p><strong>Automatizare Cazan 600 kW:</strong> Am implementat sistem complet de automatizare pentru cazan industrial, incluzând tablou putere/automatizare, cablaj control/senzori/putere și asistență tehnică la punere în funcțiune.</p>
+                        <p><strong>Automatizare Sistem 2x250 kW:</strong> Sistem dublu de automatizare pentru două cazane de 250 kW fiecare, asigurând redundanță și control optimizat al consumului energetic.</p>
+                    </div>
+                    <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mt-10" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Yazaki fabrica" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                        <h3 class="text-xl font-bold text-zal-dark mb-6">Informații Proiect</h3>
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Client</div>
+                                <div class="text-slate-700 font-medium">Yazaki / TIAB S.A.</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tip Obiectiv</div>
+                                <div class="text-slate-700">Hală Industrială - Automotive</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Anul</div>
+                                <div class="text-slate-700">2015</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Suprafață Rampe</div>
+                                <div class="text-slate-700">450 mp</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Locație</div>
+                                <div class="text-slate-700">Brăila, România</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Rol ZAL</div>
+                                <div class="text-slate-700">Proiectare, Execuție și Punere în Funcțiune</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Sistem Principal</div>
+                                <div class="text-slate-700">Snow Melting Electric + Automatizare Cazane</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Status</div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-zal-green rounded-full"></span>
+                                    <span class="text-slate-700 font-medium">Finalizat & Operațional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Galerie Foto</h2>
+            <div class="grid md:grid-cols-3 gap-6 reveal">
+                <div class="md:col-span-2 md:row-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Yazaki exterior" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tablou automatizare" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sistem snow melting" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1565043589221-a6fd9ae45c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rampe loading" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="md:col-span-2 group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Hală producție" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Detalii Tehnice</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-500">
+                            <i class="ph-fill ph-snowflake text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Sistem Snow Melting Electric</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>Suprafață încălzită: 450 mp rampe acces camioane</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>Tablou electric putere și automatizare dedicat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>Legare echipotențială completă pentru siguranță</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>4 senzori temperatură/umiditate pentru control inteligent</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>2 zone de control independent pentru optimizare consum</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>Încălzire jgheaburi pentru prevenire acumulare gheață</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-cyan-500 mt-1 flex-shrink-0"></i>
+                            <span>Activare automată în funcție de condiții meteo</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="ph-fill ph-gear text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark">Automatizare Cazane Industriale</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem automatizare cazan 600 kW</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Sistem dublu automatizare 2x250 kW cu redundanță</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Tablouri putere și automatizare dedicate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Cablaj complet control, senzori și putere</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Asistență tehnică la punere în funcțiune</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Control optimizat consum energetic</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-check text-orange-500 mt-1 flex-shrink-0"></i>
+                            <span>Monitorizare și ajustare parametri în timp real</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center reveal">Caracteristici Principale</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-snowflake text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tehnologie Snow Melting</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Sistem electric de dezgheță pentru rampe 450 mp cu control inteligent prin senzori temperatură/umiditate și 2 zone independente.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-factory text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Producător Automotive</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Yazaki este producător global de componente auto, necesitând sisteme fiabile pentru operare continuă în condiții meteo extreme.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 reveal hover:bg-white/10 transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="ph-fill ph-gear text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Automatizare Avansată</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Sisteme de automatizare pentru cazane 600 kW și 2x250 kW cu control optimizat și redundanță pentru siguranță maximă.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl font-bold text-zal-dark mb-6">Rezultate Proiect</h2>
+                <p class="text-lg text-slate-600 mb-12 leading-relaxed">Hala industrială Yazaki Brăila beneficiază de sisteme avansate de snow melting și automatizare cazane, asigurând funcționare continuă în orice condiții meteo. Proiectul a fost finalizat cu succes în 2015 și este complet operațional.</p>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <i class="ph-fill ph-seal-check text-4xl text-zal-green"></i>
+                        <h3 class="text-2xl font-bold text-zal-dark">Certificare și Garanție</h3>
+                    </div>
+                    <p class="text-slate-600 mb-4">Toate sistemele au fost certificate și puse în funcțiune:</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">Sistem Snow Melting</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">Automatizare Cazane</span>
+                        <span class="bg-white px-4 py-2 rounded-lg text-sm font-semibold text-slate-700 border border-slate-200">Instalații Electrice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-zal-light border-t border-slate-200">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-zal-dark mb-12 text-center reveal">Proiecte Similare</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-12 reveal">
+                <a href="proiect-michelin-floresti.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565043589221-a6fd9ae45c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-purple-600 font-bold uppercase mb-2">Industrial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Michelin Florești</h3>
+                        <p class="text-sm text-slate-600">Instalații sprinklere - Prahova</p>
+                    </div>
+                </a>
+                <a href="proiect-wolf-plastics.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-purple-600 font-bold uppercase mb-2">Industrial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Wolf Plastics</h3>
+                        <p class="text-sm text-slate-600">Sistem protecție incendiu - Ilfov</p>
+                    </div>
+                </a>
+                <a href="proiect-zentiva.html" class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs text-purple-600 font-bold uppercase mb-2">Industrial</div>
+                        <h3 class="text-xl font-bold text-zal-dark mb-2 group-hover:text-zal-primary transition">Zentiva S.A.</h3>
+                        <p class="text-sm text-slate-600">Hală compresoare - București</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center reveal">
+                <div class="bg-white rounded-2xl p-12 shadow-lg border border-slate-200">
+                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Ai un proiect industrial complex?</h3>
+                    <p class="text-slate-600 mb-8 max-w-2xl mx-auto">Experiența noastră în automatizare industrială și sisteme speciale include snow melting, automatizare cazane și control proces.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-zal-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 active:scale-95">Solicită o Ofertă</a>
+                        <a href="proiecte.html" class="bg-white border border-slate-300 hover:bg-slate-50 text-zal-dark px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1">Vezi Toate Proiectele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zal-dark text-slate-400 py-12 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 mb-2">
+                         <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-6 w-auto">
+                    </span>
+                    <p>&copy; 2024 ZAL INVESTMENTS COMPANY S.A. Toate drepturile rezervate.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-slate-300 transition z-10">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

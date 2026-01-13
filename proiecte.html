@@ -11,96 +11,66 @@
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        zal: {
-                            dark: '#0f172a',   
-                            primary: '#2563eb', 
-                            accent: '#f59e0b',  
-                            green: '#10b981',   
-                            light: '#f8fafc'    
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
 
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8));
-        }
-
-        /* Nav Link Underline Animation */
-        .nav-link {
-            position: relative;
-            padding-bottom: 2px;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #2563eb;
-            transition: width 0.3s ease-in-out;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .nav-link.active-link {
-            color: #2563eb;
-        }
-        .nav-link.active-link::after {
-            width: 100%;
-        }
-    </style>
+    <script src="js/tailwind-config.js"></script>
 </head>
 <body class="bg-zal-light text-slate-700 antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2563eb" class="size-6 group-hover:rotate-12 transition-transform duration-300">
-                  <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
-                </svg>
-                <span class="bg-zal-primary text-white px-2 rounded">ZAL</span> 
+            <a href="#" class="text-3xl font-bold tracking-tighter text-zal-dark flex items-center gap-2 group">
+                <img src="img/zal-logo.svg" alt="ZAL Logo" class="h-16 w-auto group-hover:scale-110 transition-transform duration-300">
             </a>
 
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
                 <a href="index.html#despre" class="nav-link">Despre noi</a>
                 <a href="index.html#servicii" class="nav-link">Servicii</a>
-                <a href="#" class="nav-link active-link">Proiecte</a>
+                <div class="relative group">
+                    <a href="proiecte.html" class="nav-link hover:text-zal-primary transition flex items-center gap-1">
+                        Proiecte
+                        <i class="ph ph-caret-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                        <div class="py-2">
+                            <a href="#retail" class="block px-4 py-3 text-sm text-slate-700 hover:bg-amber-50 hover:text-amber-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-storefront text-lg text-amber-500"></i>
+                                    <span class="font-medium">Retail & Comercial</span>
+                                </div>
+                            </a>
+                            <a href="#horeca" class="block px-4 py-3 text-sm text-slate-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-bed text-lg text-orange-500"></i>
+                                    <span class="font-medium">HoReCa & Turism</span>
+                                </div>
+                            </a>
+                            <a href="#rezidential" class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-buildings text-lg text-blue-500"></i>
+                                    <span class="font-medium">Rezidențial</span>
+                                </div>
+                            </a>
+                            <a href="#office" class="block px-4 py-3 text-sm text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-desktop text-lg text-indigo-500"></i>
+                                    <span class="font-medium">Office & Smart Buildings</span>
+                                </div>
+                            </a>
+                            <a href="#industrial" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-slate-800 transition-colors">
+                                <div class="flex items-center gap-3">
+                                    <i class="ph-fill ph-factory text-lg text-slate-600"></i>
+                                    <span class="font-medium">Industrie & Instituțional</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <a href="index.html#certificari" class="nav-link">Certificări</a>
                 <a href="index.html#cariere" class="nav-link text-zal-accent hover:text-orange-600">Cariere</a>
             </div>
 
-            <a href="index.html#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
+            <a href="#contact" class="hidden md:inline-block bg-zal-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-slate-900/20 active:scale-95">
                 Contactează-ne
             </a>
 
@@ -113,9 +83,21 @@
             <div class="flex flex-col px-6 py-4 space-y-4 font-medium">
                 <a href="index.html#despre" class="block text-slate-600">Despre noi</a>
                 <a href="index.html#servicii" class="block text-slate-600">Servicii</a>
-                <a href="#" class="block text-zal-primary font-bold">Proiecte</a>
+                <div>
+                    <button id="mobile-proiecte-toggle" class="w-full flex items-center justify-between text-slate-600 py-1">
+                        <span>Proiecte</span>
+                        <i class="ph ph-caret-down text-sm transition-transform" id="mobile-proiecte-icon"></i>
+                    </button>
+                    <div id="mobile-proiecte-menu" class="hidden pl-4 mt-2 space-y-2 text-sm">
+                        <a href="#retail" class="block text-slate-500 hover:text-amber-600 py-1">Retail & Comercial</a>
+                        <a href="#horeca" class="block text-slate-500 hover:text-orange-600 py-1">HoReCa & Turism</a>
+                        <a href="#rezidential" class="block text-slate-500 hover:text-blue-600 py-1">Rezidențial</a>
+                        <a href="#office" class="block text-slate-500 hover:text-indigo-600 py-1">Office & Smart Buildings</a>
+                        <a href="#industrial" class="block text-slate-500 hover:text-slate-700 py-1">Industrie & Instituțional</a>
+                    </div>
+                </div>
                 <a href="index.html#cariere" class="block text-zal-accent">Cariere</a>
-                <a href="index.html#contact" class="block text-slate-600">Contact</a>
+                <a href="index.html#contact" class="block text-zal-primary">Contact</a>
             </div>
         </div>
     </nav>
@@ -130,73 +112,1116 @@
         </div>
     </header>
 
-    <section id="office" class="py-20 bg-white">
+    <section id="retail" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-full flex items-center justify-center text-amber-500">
+                    <i class="ph-fill ph-storefront text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Retail & Comercial</h2>
+            </div>
+
+            <!-- ROLEX JW Marriott -->
+            <a href="proiect-rolex-jw-marriott.html" class="block mb-20">
+                <div class="grid md:grid-cols-2 gap-12 reveal group">
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1594534475735-feecf3b7c439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="ROLEX Boutique" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-amber-500/90 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                            Finalizat 2019
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-zal-dark mb-4 group-hover:text-zal-primary transition">Magazin ROLEX <span class="text-slate-400 font-normal text-lg">| JW Marriott București</span></h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Amenajare completă magazin de lux ROLEX cu instalații premium: iluminat arhitectural special (proiectoare LED, lampi ornamentale, bandă LED), sistem HVAC cu pompă de căldură, instalații sanitare și detecție incendiu.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="border-l-4 border-amber-500 pl-4">
+                                <h4 class="font-bold text-sm text-zal-dark uppercase">Lucrări Executate:</h4>
+                                <p class="text-sm text-slate-600 mt-1">Iluminat special LED premium, sistem HVAC pe buclă de apă, instalații sanitare cu sprinklere, detecție incendiu.</p>
+                            </div>
+                            <div class="border-l-4 border-zal-primary pl-4">
+                                <h4 class="font-bold text-sm text-zal-dark uppercase">Specificații:</h4>
+                                <p class="text-sm text-slate-600 mt-1">Proiectare + Execuție (Fază PT) conform standardelor internaționale ROLEX pentru boutique-uri de lux.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded text-xs font-medium">Luxury Retail</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Iluminat Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="grid lg:grid-cols-2 gap-8 reveal mb-20">
+                <!-- SABON AFI Palace -->
+                <a href="proiect-sabon-afi-cotroceni.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SABON AFI Palace" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-500">AFI Palace Cotroceni</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-amber-500 transition">SABON AFI Palace Cotroceni</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Magazin cosmetice premium 100mp. Proiectare PT completă: sistem VRV HVAC, instalații sanitare cu sprinklere, instalații electrice, detecție incendiu.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Retail Premium</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">100 mp</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">SABON International</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- GrainTrip Brutărie -->
+                <a href="proiect-graintrip-brutarie.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="GrainTrip Brutărie" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-amber-500 transition">GrainTrip Brutărie</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Brutărie artizanală cu proiectare DTAC+PT și execuție completă. Instalații sanitare conform ANSVSA, electrice pentru echipamente profesionale, ventilație producție.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Food Retail</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">DTAC+PT+Execuție</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">ANSVSA</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Pupa Milano AFI Palace -->
+                <a href="proiect-pupa-milano.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-pink-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pupa Milano" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-pink-500">Multi-Locație</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-pink-500 transition">Pupa Milano AFI Palace</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Magazin cosmetice premium în AFI Cotroceni, Brașov și Ploiești. Instalații electrice, HVAC VRV, iluminat special pentru produse cosmetice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-xs font-medium">Cosmetice Premium</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">3 Locații</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">100 mp/loc</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Bricostore Băneasa -->
+                <a href="proiect-bricostore-baneasa.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bricostore Băneasa" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2005-2006</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-amber-500 transition">Bricostore Băneasa</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Centru comercial DIY. Lucrări complete de construcții: structuri (fundații, stâlpi, grinzi), hidroizolații, finisaje, împrejmuiri. Parteneriat ICSIM.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">DIY Retail</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Construcții</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">ICSIM</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Praktiker Constanța -->
+                <a href="proiect-praktiker.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565514158740-64d3edd19629?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Praktiker Constanța" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-500">Constanța</span>
+                            <span class="text-xs font-bold text-slate-500">2005</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-amber-500 transition">Praktiker Constanța</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Magazin DIY cu instalații specializate: rezervor apă, stație pompe, rețele hidranți. Construcții complete: structuri, finisaje, împrejmuiri. ICSIM.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">DIY Store</span>
+                            <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Protecție Incendiu</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">ICSIM</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="horeca" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-zal-accent/10 rounded-full flex items-center justify-center text-zal-accent">
+                    <i class="ph-fill ph-bed text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">HoReCa & Turism</h2>
+            </div>
+
+            <!-- Hotel Piccadilly -->
+            <a href="proiect-hotel-piccadilly.html" class="block mb-20">
+                <div class="grid md:grid-cols-2 gap-12 reveal group">
+                    <div class="flex flex-col justify-center order-2 md:order-1">
+                        <h3 class="text-2xl font-bold text-zal-dark mb-4 group-hover:text-zal-primary transition">Hotel Piccadilly <span class="text-slate-400 font-normal text-lg">| Mamaia, Constanța</span></h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Hotel P+4E cu instalații complete: sistem HVAC avansat (centrale 450kW + chillere 2x165kW), instalații sanitare cu hidranti, instalații electrice cu grup electrogen 50kVA și sistem de automatizare punct termic.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <div class="text-3xl font-bold text-zal-accent">5.597</div>
+                                <div class="text-xs text-slate-500 uppercase">mp construiți</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-zal-accent">450kW</div>
+                                <div class="text-xs text-slate-500 uppercase">Putere termică</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-accent"></i> Instalații HVAC complete</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-accent"></i> Sistem detecție incendiu</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-accent"></i> Automatizare avansată</li>
+                        </ul>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl order-1 md:order-2">
+                        <img src="img/proiecte/piccadilly/hotel-piccadilly-0.jpg" alt="Hotel Piccadilly" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-zal-accent/90 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                            Finalizat 2019
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="grid lg:grid-cols-2 gap-8 reveal">
+                <!-- Linea Bartending -->
+                <a href="proiect-linea-bartending.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Linea Bartending" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-accent">Constanța / București</span>
+                            <span class="text-xs font-bold text-slate-500">2018-2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-accent transition">Linea Professional Bartending</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Spațiu profesional bartending cu iluminat special LED (proiectoare, lampi ornamentale, bandă LED), instalații electrice dedicate echipamente, sisteme de desfumare și rulouri ferestre.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-xs font-medium">HoReCa Premium</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Iluminat Special</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Multi-locație</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Club Interbelic -->
+                <a href="proiect-club-interbelic.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Club Interbelic" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-accent">Magazin Victoria</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-accent transition">Club Interbelic</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Club cu design vintage în Magazin Victoria București. Iluminat special interbelic cu lampi ornamentale, LED modern și bandă LED pentru atmosferă autentică perioadei interbelice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-xs font-medium">Club Tematic</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Design Vintage</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Locație Iconică</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Nostalgia (Linea Catering) -->
+                <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nostalgia Linea Catering" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-accent">București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-accent transition">Nostalgia (Linea Catering)</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Spațiu HoReCa modern pentru catering. Instalații electrice pentru echipamente profesionale, ventilație bucătărie, instalații sanitare conform ANSVSA.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-xs font-medium">Catering</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Linea Group</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">ANSVSA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rezidential" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="flex items-center gap-4 mb-12">
                 <div class="w-12 h-12 bg-zal-primary/10 rounded-full flex items-center justify-center text-zal-primary">
                     <i class="ph-fill ph-buildings text-2xl"></i>
                 </div>
-                <h2 class="text-3xl font-bold text-zal-dark">Comercial & Office</h2>
+                <h2 class="text-3xl font-bold text-zal-dark">Ansambluri Rezidențiale</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 mb-20 reveal">
-                <div class="relative group overflow-hidden rounded-2xl shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Office Building" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur text-zal-dark px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
-                        Finalizat 2023
+            <div class="grid lg:grid-cols-2 gap-8 reveal">
+                <!-- GRAN VIA MARINA -->
+                <a href="proiect-gran-via-marina.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="GRAN VIA MARINA" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">Constanța, MARINA</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">GRAN VIA MARINA</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            192 unități locative pe D+P+10E+11D. Cel mai amplu proiect ZAL - instalații electrice de forță complete pentru toate cele 192 de unități.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">192 unități</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">12 niveluri</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Constanța</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ARBO Residence -->
+                <a href="proiect-arbo-residence.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/proiecte/arbo/arbo-residence-0.jpg" alt="ARBO Residence" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">Mogoșoaia, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">ARBO Residence</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            156 apartamente în 5 scări (P+10E). Instalații electrice complete: curenti tari/slabi, detecție incendiu, telefonie, TV digitală, detecție CO în parcare.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">156 apartamente</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">5 scări</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Protecție PDA</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Habio Residence -->
+                <a href="proiect-habio-residence.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="img/proiecte/habio/habio-3.jpg" alt="Habio Residence" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">București, Sector 3</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">Habio Residence</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            91 apartamente în 2 scări (P+6E). Instalații electrice complete cu detecție incendiu, sisteme anti-îngheț, stație hidrofor și parcare echipată.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">91 apartamente</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">2 scări</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">IP-TV</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Bloc Cazzavillan -->
+                <a href="proiect-bloc-cazzavillan.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bloc Cazzavillan" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">Bloc Cazzavillan</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            20 apartamente cu instalații electrice complete. Detecție incendiu, protecție PDA, sisteme anti-îngheț și comunicații moderne (Wi-Fi, TV, telefonie).
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">20 apartamente</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Curenti Tari/Slabi</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">ANRE Avizat</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casa Pasivă Otopeni -->
+                <a href="proiect-casa-pasiva-otopeni.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-green hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casa Pasivă Otopeni" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-green">Otopeni, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-green transition">Casa Pasivă Otopeni</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+1E, 200 mp - casă pasivă cu instalații MEP eco-friendly. Pompă de căldură, încălzire în pardoseală, VMC cu recuperare căldură 90%+, panouri solare termice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Green Building</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">A+ Rating</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">200 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casa Pasivă Snagov -->
+                <a href="proiect-casa-pasiva-snagov.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-green hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casa Pasivă Snagov" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-green">Snagov, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-green transition">Casa Pasivă Snagov</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+M, 180 mp - casă pasivă cu pompă geotermală. Sistem complex: geotermie, recuperare apă pluvială, VMC eficientă, tratare ape uzate ecologice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Green Building</span>
+                            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium">Geotermală</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">180 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casă Tunari -->
+                <a href="proiect-casa-tunari.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casă Tunari" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">Tunari, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">Casă Tunari</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+1E, 250 mp - casă unifamilială cu instalații MEP complete. Iluminat LED modern, rețele structurate, sistem climatizare split, detecție incendiu.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Rezidențial</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">MEP Complete</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">250 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casă Pipera -->
+                <a href="proiect-casa-pipera.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-amber-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casă Pipera" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Pipera, București</span>
+                            <span class="text-xs font-bold text-slate-500">2022</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-amber-600 transition">Casă Pipera</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+1E+M, 320 mp - vilă premium cu smart home integration (KNX). Finisaje de lux (Grohe, Hansgrohe), sistem HVAC VRV, securitate și supraveghere completă.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Premium</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">Smart Home</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">320 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casă Iancu Nicolae -->
+                <a href="proiect-casa-iancu-nicolae.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casă Iancu Nicolae" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">Iancu Nicolae, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">Casă Iancu Nicolae</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+1E, 280 mp - casă unifamilială cu instalații MEP complete. Iluminat LED, rețele Cat6, încălzire centrală cu radiatoare, sistem climatizare, detecție incendiu.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Rezidențial</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">MEP Complete</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">280 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Casa Pasivă Primaverii -->
+                <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-green hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casa Pasivă Primaverii" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-green">Primaverii, Otopeni</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-green transition">Casă Pasivă Primaverii</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+M, 160 mp - casă pasivă eco-friendly. Pompă de căldură, VMC eficientă, instalații complete pentru clasă energetică superioară.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Green Building</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Eco-Friendly</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">160 mp</span>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-zal-dark mb-4">Green Business Hub <span class="text-slate-400 font-normal text-lg">| București</span></h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Un proiect emblematic pentru eficiență energetică. ZAL a proiectat și executat integral sistemul electric și de automatizare, contribuind la obținerea certificării BREEAM Excellent.
-                    </p>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="border-l-4 border-zal-primary pl-4">
-                            <h4 class="font-bold text-sm text-zal-dark uppercase">Lucrări Executate:</h4>
-                            <p class="text-sm text-slate-600 mt-1">Post transformare 2x1000kVA, Tablouri generale, Sistem iluminat DALI, BMS integrat (HVAC + Electrice).</p>
+
+                <!-- Global Residence Mihai Bravu -->
+                <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-red-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Global Residence" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-red-500">Mihai Bravu, București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
                         </div>
-                        <div class="border-l-4 border-zal-accent pl-4">
-                            <h4 class="font-bold text-sm text-zal-dark uppercase">Provocare Tehnică:</h4>
-                            <p class="text-sm text-slate-600 mt-1">Integrarea sistemului de control acces cu lifturile inteligente și detecția de incendiu.</p>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-red-500 transition">Global Residence Mihai Bravu - Corp B</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Instalații detecție și semnalizare incendiu pentru ansamblu rezidențial. Sistem modern de siguranță conform normelor pompieri.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Detecție Incendiu</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Rezidențial</span>
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-xs font-medium">Siguranță</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="flex gap-4">
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">15.000 mp</span>
-                        <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Smart Building</span>
+                <!-- Clădire Poiana lui Stanga -->
+                <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-zal-primary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Poiana lui Stanga" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-zal-primary">București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-zal-primary transition">Clădire de Locuit Poiana lui Stanga</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            P+1E - clădire de locuit cu instalații MEP complete. Electrice, sanitare, HVAC pentru confort și eficiență energetică.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Rezidențial</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">P+1E</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">MEP Complete</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="grid md:grid-cols-2 gap-12 reveal">
-                <div class="flex flex-col justify-center order-2 md:order-1">
-                    <h3 class="text-2xl font-bold text-zal-dark mb-4">North Logistics Park <span class="text-slate-400 font-normal text-lg">| Ilfov</span></h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
-                        Hale industriale cu cerințe specifice de iluminat și alimentare forță pentru linii de producție automatizate.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <div class="text-3xl font-bold text-zal-primary">45km</div>
-                            <div class="text-xs text-slate-500 uppercase">Cabluri pozate</div>
+    <section id="office" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-indigo-500/10 rounded-full flex items-center justify-center text-indigo-500">
+                    <i class="ph-fill ph-desktop text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Office & Smart Buildings</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 reveal">
+                <!-- Philip Morris -->
+                <a href="proiect-philip-morris-otopeni.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Philip Morris Otopeni" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Otopeni, Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2018-2019</span>
                         </div>
-                        <div>
-                            <div class="text-3xl font-bold text-zal-primary">2MW</div>
-                            <div class="text-xs text-slate-500 uppercase">Putere instalată</div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">Birouri Philip Morris</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Sistem inteligent KNX pentru control iluminat. Reconfigurare completă instalații cu senzori de prezență, reglaj automat și control centralizat.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Sistem KNX</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Smart Lighting</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Eficiență 40%</span>
                         </div>
                     </div>
-                    
-                    <ul class="space-y-2 text-sm text-slate-600 mb-6">
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Iluminat industrial LED 500 lux</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Instalații paratrăsnet PDA</li>
-                        <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-primary"></i> Grup electrogen backup 500kVA</li>
-                    </ul>
+                </a>
+
+                <!-- BCR Galați -->
+                <a href="proiect-bcr-galati.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="BCR Galați" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Galați</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">BCR Galați</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Amenajare sucursală bancară 400mp. Proiectare DTAC+PT completă: HVAC sistem VRV, instalații sanitare cu sprinklere, instalații electrice conform standarde bancare.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Banking</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Sistem VRV</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">DTAC+PT</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Magazin Victoria Etaj 5 -->
+                <a href="proiect-magazin-victoria-etaj5.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Magazin Victoria Etaj 5" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Magazin Victoria</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">Birouri Etaj 5 - Magazin Victoria</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Amenajare birouri în clădire istorică emblematică. Proiectare DTAC+PT și execuție completă instalații electrice, iluminat inteligent, rețele structurate, sisteme IT.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Clădire Istorică</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">DTAC+PT+Execuție</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Office Modern</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- JGV Office Building -->
+                <a href="proiect-jgv-office-building.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="JGV Office Building" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">JGV Office Building</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Proiectare și execuție completă MEP pentru clădire birouri. Instalații electrice, sanitare și HVAC integrate pentru confort maxim.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">MEP Complete</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Design+Execuție</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">HVAC</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- US Food Network -->
+                <a href="proiect-us-food-network.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="US Food Network" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">US Food Network</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Instalații electrice pentru companie internațională. Iluminat LED inteligent, rețele structurate și sisteme complete de securitate.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Corporate</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">LED Inteligent</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">International</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Banca Transilvania -->
+                <a href="proiect-banca-transilvania.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Banca Transilvania" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">Banca Transilvania</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Proiectare DTAC pentru sucursală bancară. HVAC, sanitare și instalații electrice cu sisteme redundante conform standarde bancare.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Banking</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">DTAC MEP</span>
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Securitate 24/7</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Evozon Cluj -->
+                <a href="proiect-evozon-cluj.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Evozon Cluj" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">Cluj-Napoca</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">Evozon Software</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Birouri IT în Cluj. Instalații electrice optimizate pentru software house: rețele ultra-rapide Cat6A, LED inteligent, infrastructură scalabilă.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Tech Office</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Cluj-Napoca</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Cat6A Network</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Prime Kapital -->
+                <a href="proiect-prime-kapital.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Prime Kapital" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">Prime Kapital</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Birouri corporate premium pentru dezvoltator imobiliar. Finisaje de lux, iluminat cu scenarii personalizate, sisteme integrate.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Premium Office</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Real Estate Dev</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Smart Systems</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- The Bridge -->
+                <a href="proiect-the-bridge.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Bridge" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2017</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">The Bridge Office Building</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Clădire birouri Class A Șoseaua Orhideelor. Instalații electrice complete: circuite prize, iluminat arhitectural, corpuri premium. Verificări tehnice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Office Class A</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Instalații Complete</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Verificări</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- The Mark -->
+                <a href="proiect-the-mark.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Mark" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2017</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">The Mark Office Building</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Calea Griviței. Instalații electrice JT complete: infrastructură distribuție, tablouri, circuite prize/iluminat, alimentare VCV, lift, sisteme siguranță.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Office Building</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">JT Complet</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Distribuție</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- LIDL Office HQ -->
+                <a href="proiect-lidl-office-hq.html" class="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-indigo-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="LIDL Office HQ" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-indigo-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2022-2023</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-indigo-500 transition">LIDL Office HQ București</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Sediu central LIDL. Instalații electrice moderne pentru birouri corporate: iluminat LED inteligent, rețele structurate, sisteme smart building, UPS.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-medium">Corporate HQ</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Smart Building</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">LIDL</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- IBM/Dell Verifications Card -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
+                            <i class="ph-fill ph-clipboard-text text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-zal-dark">Verificări Instalații Electrice</h3>
+                            <p class="text-sm text-slate-500">Contracte anuale de mentenanță</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm mb-6">
+                        Servicii continue de verificare și mentenanță instalații electrice pentru clădiri de birouri multinaționale.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-3">
+                            <i class="ph-fill ph-check text-blue-600"></i>
+                            <span class="text-sm text-slate-700">IBM - București, Cluj, Timișoara, Brașov</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ph-fill ph-check text-blue-600"></i>
+                            <span class="text-sm text-slate-700">DELL - București</span>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-4 text-sm">
+                        <p class="font-semibold text-blue-900 mb-2">Servicii incluse:</p>
+                        <ul class="text-blue-700 space-y-1 text-xs">
+                            <li>• Măsurare continuitate nul de protecție</li>
+                            <li>• Verificare prize de pământ</li>
+                            <li>• Termoviziune tablouri electrice</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="relative group overflow-hidden rounded-2xl shadow-xl order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Industrial Hall" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <section id="industrial" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-slate-700/10 rounded-full flex items-center justify-center text-slate-700">
+                    <i class="ph-fill ph-factory text-2xl"></i>
                 </div>
+                <h2 class="text-3xl font-bold text-zal-dark">Industrie & Instituțional</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 reveal">
+                <!-- BAT Factory -->
+                <a href="proiect-bat-factory-ploiesti.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="BAT Factory" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Ploiești</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">British American Tobacco Factory</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            HVAC industrial complex: ventiloconvectori de tavan, rețea PPR pentru agent termic, evacuare condens. Instalații pentru mediul industrial TIAB S.A.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">HVAC Industrial</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Rețea PPR</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">BAT</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Spital Bagdasar -->
+                <a href="proiect-spital-bagdasar.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-red-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Spital Bagdasar" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-red-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-red-500 transition">Spital Bagdasar</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Instalații electrice critice: BAC 160kVAR compensare energie, tablou inversor de sursă (TAS), tablou automatizare transformatoare. Mediu medical 24/7.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Healthcare</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">160kVAR BAC</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">TAS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Piscină Sportivă -->
+                <a href="proiect-piscina-sportiva.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Piscină Sportivă" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-cyan-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2019</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-cyan-500 transition">Piscină Sportivă</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Complex sportiv cu sisteme specializate: filtrare și tratare apă, încălzire piscină, HVAC cu control umiditate, instalații electrice IP65+ pentru zone umede.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Sport & Recreere</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Filtrare Avansată</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">800 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Biserică -->
+                <a href="proiect-biserica.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biserică" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-purple-500">Ilfov</span>
+                            <span class="text-xs font-bold text-slate-500">2018</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-purple-500 transition">Biserică</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Lăcaș de cult cu instalații specializate: iluminat arhitectural pentru spații sacre, HVAC silențios pentru volume mari, sisteme audio și clopote electrice.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">Instituțional</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Arhitectural</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">600 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Clinică Medicală -->
+                <a href="proiect-clinica-medicala.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-red-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Clinică Medicală" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-red-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2020</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-red-500 transition">Clinică Medicală</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Instalații MEP medicale: circuite redundante + UPS, HVAC cu filtrare HEPA, instalații sanitare conform MS/DSP, iluminat special cabinete medicale.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">Healthcare</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">HEPA Filtrare</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">500 mp</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Bazin Înot Grădiniță -->
+                <a href="proiect-bazin-gradinita.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bazin Grădiniță" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-cyan-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-cyan-500 transition">Bazin Înot Grădiniță nr.191</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Piscină educațională pentru grădiniță. Sisteme specializate: filtrare apă pentru copii, încălzire bazin, HVAC cu control umiditate, siguranță electrică IP65+.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium">Educațional</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Piscină</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">EZ PROJECT</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Biserică Adventistă -->
+                <a href="proiect-biserica-adventista.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-purple-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biserică Adventistă" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-purple-500">București</span>
+                            <span class="text-xs font-bold text-slate-500">2021</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-purple-500 transition">Biserică Adventistă de Ziua a 7-a</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Lăcaș de cult 823 mp. Iluminat arhitectural modern LED, HVAC silențios pentru volume mari, sisteme audio/multimedia profesionale.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-medium">Instituțional</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">823 mp</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Modern</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Wolf Plastics -->
+                <a href="proiect-wolf-plastics.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Wolf Plastics" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">București</span>
+                            <span class="text-xs font-bold text-slate-500">2023</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">Wolf Plastics Fabrică Producție</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Hală industrială producție. Instalații electrice industriale complete: alimentare mașini, iluminat LED industrial, tablouri forță, sisteme protecție.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Industrial</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Producție</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">LED Industrial</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Michelin Florești -->
+                <a href="proiect-michelin-floresti.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565514158740-64d3edd19629?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Michelin Florești" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Florești, Cluj</span>
+                            <span class="text-xs font-bold text-slate-500">2022-2023</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">Michelin Florești - Fabrică Anvelope</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Instalații electrice industriale pentru fabrică anvelope de mari dimensiuni. Alimentare linii producție, tablouri electrice industriale, iluminat LED eficient.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Automotive</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Michelin</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Fabrică Mare</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Yazaki Brăila -->
+                <a href="proiect-yazaki-braila.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yazaki Brăila" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Brăila</span>
+                            <span class="text-xs font-bold text-slate-500">2023</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">Yazaki Brăila - Componente Auto</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Fabrică componente auto. Instalații electrice industriale pentru linii de producție automotive, iluminat industrial LED, tablouri forță, monitorizare consum.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Automotive</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Yazaki</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-medium">Eficiență</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Iron Mountain -->
+                <a href="proiect-iron-mountain.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Iron Mountain" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">București</span>
+                            <span class="text-xs font-bold text-slate-500">2015</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">Iron Mountain - Depozit Archive</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Sistem specializat iluminat rafturi pentru depozit industrial. Instalații electrice pentru depozitare documentare: iluminat LED pe rafturi, tablouri, protecție.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Depozitare</span>
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">Iron Mountain</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Iluminat Rafturi</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Zentiva -->
+                <a href="proiect-zentiva.html" class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-slate-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Zentiva" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">București</span>
+                            <span class="text-xs font-bold text-slate-500">2017</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-zal-dark mb-3 group-hover:text-slate-700 transition">Zentiva - Extindere Hală Compresoare</h3>
+                        <p class="text-slate-600 text-sm mb-4">
+                            Proiectare și execuție extindere hală compresoare servicii. Instalații electrice iluminat, prize, forță pentru stație compresoare 300 KW. TIAB S.A.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Pharma</span>
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-xs font-medium">300 KW</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-medium">Zentiva</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -267,8 +1292,48 @@
                 <div class="w-12 h-12 bg-zal-green/10 rounded-full flex items-center justify-center text-zal-green">
                     <i class="ph-fill ph-leaf text-2xl"></i>
                 </div>
-                <h2 class="text-3xl font-bold text-zal-dark">Eficiență Energetică</h2>
+                <h2 class="text-3xl font-bold text-zal-dark">Eficiență Energetică & Green Building</h2>
             </div>
+
+            <!-- Casa Pasivă Brănești -->
+            <a href="proiect-casa-pasiva-branesti.html" class="block mb-12">
+                <div class="grid md:grid-cols-2 gap-12 reveal group">
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Casă Pasivă" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-zal-green/90 backdrop-blur text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                            Finalizat 2020
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-zal-dark mb-4 group-hover:text-zal-green transition">Casă Pasivă Brănești <span class="text-slate-400 font-normal text-lg">| 235 mp, P+1E</span></h3>
+                        <p class="text-slate-600 mb-6 leading-relaxed">
+                            Casă pasivă cu instalații complete ecologice: pompă de căldură aer-apă, încălzire/răcire prin pardoseală, ventilație cu recuperare căldură (90%+), sistem epurare ape menajere. Clasă energetică A+.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <div class="text-3xl font-bold text-zal-green">90%</div>
+                                <div class="text-xs text-slate-500 uppercase">Economie Energie</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-zal-green">A+</div>
+                                <div class="text-xs text-slate-500 uppercase">Clasă Energetică</div>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-green"></i> Pompă căldură aer-apă</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-green"></i> Ventilație cu recuperare 90%+</li>
+                            <li class="flex items-center gap-2"><i class="ph-fill ph-check text-zal-green"></i> Instalații complete IE+IS+HVAC</li>
+                        </ul>
+
+                        <div class="flex gap-4">
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded text-xs font-medium">Green Building</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">Casă Pasivă</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
             <div class="bg-slate-900 rounded-2xl overflow-hidden text-white reveal shadow-2xl">
                 <div class="grid md:grid-cols-2">
@@ -309,6 +1374,73 @@
         </div>
     </section>
 
+    <section id="proiectare" class="py-20 bg-gradient-to-br from-slate-50 to-blue-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <a href="proiect-portofoliu-proiectare.html" class="block group">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                        <div class="grid md:grid-cols-5">
+                            <div class="md:col-span-3 p-10 md:p-12">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                        <i class="ph-fill ph-blueprint text-2xl text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Servicii de Inginerie</span>
+                                        <h3 class="text-2xl font-bold text-zal-dark group-hover:text-blue-600 transition">Portofoliu Proiectare DTAC/PT</h3>
+                                    </div>
+                                </div>
+
+                                <p class="text-slate-600 mb-6 leading-relaxed">
+                                    Descoperă expertiza ZAL în proiectare și consultanță tehnică MEP. Peste <strong>15 proiecte</strong> de inginerie în fazele DTAC și PT pentru diverse tipuri de construcții.
+                                </p>
+
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="ph-fill ph-check-circle text-blue-600"></i>
+                                        <span class="text-slate-700">Proiecte Rezidențiale</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="ph-fill ph-check-circle text-blue-600"></i>
+                                        <span class="text-slate-700">Comercial & Office</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="ph-fill ph-check-circle text-blue-600"></i>
+                                        <span class="text-slate-700">Industrial</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="ph-fill ph-check-circle text-blue-600"></i>
+                                        <span class="text-slate-700">Infrastructură</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-3 text-blue-600 font-semibold group-hover:gap-4 transition-all">
+                                    <span>Vezi Portofoliu Complet</span>
+                                    <i class="ph-bold ph-arrow-right text-xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2 bg-gradient-to-br from-blue-600 to-indigo-700 p-10 flex flex-col justify-center text-white">
+                                <div class="mb-8">
+                                    <div class="text-5xl font-bold mb-2">15+</div>
+                                    <div class="text-sm text-blue-100 uppercase tracking-wider">Proiecte DTAC/PT</div>
+                                </div>
+                                <div class="mb-8">
+                                    <div class="text-5xl font-bold mb-2">100k+</div>
+                                    <div class="text-sm text-blue-100 uppercase tracking-wider">mp Proiectați</div>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-xs">ANRE Avizat</span>
+                                    <span class="bg-white/20 backdrop-blur text-white px-3 py-1 rounded-full text-xs">Multi-Domenii</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="py-20 bg-zal-light">
         <div class="container mx-auto px-6 text-center reveal">
             <h2 class="text-3xl font-bold text-zal-dark mb-6">Ai un proiect care necesită precizie?</h2>
@@ -343,18 +1475,6 @@
         </div>
     </footer>
 
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
